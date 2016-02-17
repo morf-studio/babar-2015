@@ -8,7 +8,20 @@
         "base"
 ;
 
+body{
+  background-color:$white;
+  color:$navy;
+  border-left:2rem solid $red;
+}
 .number{
   font-family:$condensed-font-family;
   font-size:16rem;
+  color:$red;
+}
+blockquote{
+  background-color:$red;
+  color:$white;
+  font-size:2rem;
+  padding:4rem;
+  font-weight:600;
 }

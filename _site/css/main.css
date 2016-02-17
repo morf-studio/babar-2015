@@ -1231,7 +1231,7 @@ h6, .h6 {
   text-decoration: none; }
 
 strong, .bold {
-  font-weight: bold, bold; }
+  font-weight: 600, bold; }
 
 .regular {
   font-weight: normal; }
@@ -1310,21 +1310,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  font-weight: bold; }
+  font-weight: 600; }
   @media screen and (min-width: 64em) {
     h1 {
       font-size: 4rem; } }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: 600; }
   @media screen and (min-width: 64em) {
     h2 {
       font-size: 2rem; } }
 
 h3 {
   font-size: 1.25rem;
-  font-weight: bold; }
+  font-weight: 600; }
   @media screen and (min-width: 64em) {
     h3 {
       font-size: 1.5rem; } }
@@ -1462,6 +1462,19 @@ figure > img {
 figcaption {
   font-size: 0.875rem; }
 
+body {
+  background-color: #FFF;
+  color: #132756;
+  border-left: 2rem solid #ff4427; }
+
 .number {
   font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-size: 16rem; }
+  font-size: 16rem;
+  color: #ff4427; }
+
+blockquote {
+  background-color: #ff4427;
+  color: #FFF;
+  font-size: 2rem;
+  padding: 4rem;
+  font-weight: 600; }
