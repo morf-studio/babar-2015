@@ -1,6 +1,8 @@
 // BRAND COLORS
 
-$red: #ff4427;
+//$red: #ff4427;
+//$red: #e2231a;
+$red: #ff0000;
 $skyblue: #67b2e7;
 $navy: #132756;
 
@@ -13,6 +15,11 @@ $navy: #132756;
 .navy-lt {color:#1D2E65;}
 .navy    {color:$navy;}
 .navy-dk {color:#031D40;}
+
+.bg-red { background-color:$red;}
+.bg-blue{ background-color:$skyblue;}
+.bg-navy{ background-color:$navy;}
+
 
 // UTILITY COLORS
 $black: #000;

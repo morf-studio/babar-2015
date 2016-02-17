@@ -56,11 +56,11 @@ $measure-width-narrow:22em;
 .font-size-inherit { font-size: inherit }
 .text-decoration-none { text-decoration: none }
 
-strong, .bold  { font-weight: $bold-font-weight, bold }
+strong { font-weight: $bold-font-weight}
 .regular { font-weight: normal }
 .italic  { font-style: italic }
 .caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
-
+.bold {font-weight:bold;}
 .text-left   { text-align: left }
 .text-center       { text-align: center }
 .text-right  { text-align: right }
