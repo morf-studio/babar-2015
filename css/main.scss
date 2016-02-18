@@ -52,7 +52,7 @@ blockquote{
   //display:none;
   //transition:.5s;
   overflow:hidden;
-  max-height:9999vh;
+  max-height:9999px;
   &.closed{
     max-height:1px;
   }

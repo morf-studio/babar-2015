@@ -1521,10 +1521,10 @@ td {
   /* easeInOutBack */ }
 
 .ease-expo {
-  -webkit-transition: all 500ms cubic-bezier(1, 0, 0, 1);
-  -moz-transition: all 500ms cubic-bezier(1, 0, 0, 1);
-  -o-transition: all 500ms cubic-bezier(1, 0, 0, 1);
-  transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  -o-transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  transition: all 300ms cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */
   -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
   -moz-transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -1571,7 +1571,7 @@ blockquote {
 
 .pane {
   overflow: hidden;
-  max-height: 9999vh; }
+  max-height: 9999px; }
   .pane.closed {
     max-height: 1px; }
 
