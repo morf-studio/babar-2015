@@ -1362,10 +1362,6 @@ li > ol {
   margin-left: 0;
   padding-left: 0;
   list-style: none; }
-  .list-reset li {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding: 0.5rem 0 0.5rem; }
 
 dl {
   list-style: square; }
@@ -1541,7 +1537,6 @@ body {
   color: #132756; }
 
 .story {
-  margin-top: 2em;
   margin-bottom: 3rem; }
 
 .number {
@@ -1582,3 +1577,16 @@ blockquote {
 
 section {
   position: relative; }
+
+@media screen and (min-width: 64em) {
+  .average-line {
+    width: 100%;
+    border-top: 1px dotted #132756; } }
+
+.fundraiser-name {
+  transform: rotate(90deg);
+  transform-origin: 6% 75%; }
+  @media screen and (min-width: 96em) {
+    .fundraiser-name {
+      transform: rotate(45deg);
+      transform-origin: 20% 200%; } }

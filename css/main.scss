@@ -14,7 +14,7 @@ body{
   //border-left:2rem solid $red;
 }
 .story{
-  margin-top:2em;
+  //margin-top:2em;
   margin-bottom:3rem;
 }
 .number{
@@ -64,4 +64,19 @@ section{
 #WhatIsBB{
   //color:$white;
   //background-color:$navy;
+}
+
+.average-line{
+  @include breakpoint(l) {
+    width:100%;
+    border-top: 1px dotted $navy;
+  };
+}
+.fundraiser-name{
+  transform:rotate(90deg);
+  transform-origin: 6% 75%;
+  @include breakpoint(xl) {
+    transform:rotate(45deg);
+    transform-origin: 20% 200%;
+  };
 }
