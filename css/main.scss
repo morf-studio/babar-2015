@@ -13,9 +13,26 @@ body{
   color:$navy;
   //border-left:2rem solid $red;
 }
+#Story{
+  border-left:2px solid $navy;
+}
 .story{
   //margin-top:2em;
   margin-bottom:3rem;
+  line-height:1;
+  position:relative;
+  &:before{
+    display:block;
+    content:'';
+    border-top:2px solid $navy;
+    width:.75em;
+    position:absolute;
+    top:-2rem;
+    left:-1em;
+    @include breakpoint(m) {
+      top:-2.5rem
+    };
+  }
 }
 .number{
   font-family:$condensed-font-family;
@@ -54,7 +71,7 @@ blockquote{
   overflow:hidden;
   max-height:9999px;
   &.closed{
-    max-height:1px;
+    max-height:0px;
   }
 }
 section{

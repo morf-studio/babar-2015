@@ -1178,24 +1178,16 @@ dl, dd, ol, ul, figure {
 /*
  * Aspect Ratio Control on divs with no, or variable content.
  */
-.ratio-16-9:before {
-  content: ' ';
-  display: block;
+.ratio-16-9 {
   padding-top: 56.25%; }
 
-.ratio-3-2:before {
-  content: ' ';
-  display: block;
+.ratio-3-2 {
   padding-top: 66.66667%; }
 
-.ratio-4-3:before {
-  content: ' ';
-  display: block;
+.ratio-4-3 {
   padding-top: 75%; }
 
-.ratio-1-1:before {
-  content: ' ';
-  display: block;
+.ratio-1-1 {
   padding-top: 100%; }
 
 /* Basscss Type Scale */
@@ -1385,16 +1377,6 @@ button {
   height: 6rem;
   width: 6rem;
   padding: 1rem; }
-  .btn-circle .icon {
-    color: black; }
-
-.icon {
-  /*display: block;*/
-  margin: auto;
-  width: 2rem;
-  height: 2rem;
-  fill: currentColor;
-  padding: 1rem; }
 
 .icon-big {
   width: 4rem;
@@ -1423,6 +1405,17 @@ button {
 .button-text {
   display: block;
   padding: 5.5rem 0; }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  padding: 1rem 0; }
+
+@media screen and (min-width: 48em) {
+  .story-icon {
+    font-size: 1.5rem; } }
 
 a {
   transition: all .3s;
@@ -1463,6 +1456,17 @@ figure > img {
 
 figcaption {
   font-size: 0.875rem; }
+
+.videoWrapper {
+  position: relative;
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 th {
   text-align: left; }
@@ -1536,8 +1540,24 @@ body {
   background-color: #FFF;
   color: #132756; }
 
+#Story {
+  border-left: 2px solid #132756; }
+
 .story {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  line-height: 1;
+  position: relative; }
+  .story:before {
+    display: block;
+    content: '';
+    border-top: 2px solid #132756;
+    width: .75em;
+    position: absolute;
+    top: -2rem;
+    left: -1em; }
+    @media screen and (min-width: 48em) {
+      .story:before {
+        top: -2.5rem; } }
 
 .number {
   font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
@@ -1573,7 +1593,7 @@ blockquote {
   overflow: hidden;
   max-height: 9999px; }
   .pane.closed {
-    max-height: 1px; }
+    max-height: 0px; }
 
 section {
   position: relative; }

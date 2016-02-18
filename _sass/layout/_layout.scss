@@ -154,12 +154,7 @@ $width-xxxl: 128rem;
    * Aspect Ratio Control on divs with no, or variable content.
    */
   @mixin ratio($width,$height){
-  	&:before{
-  		content:' ';
-  		display:block;
-      //position:absolute; // remove this when needed
-  		padding-top: ($height / $width) * 100%;
-  	}
+    padding-top: ($height / $width) * 100%;
   }
 
   .ratio-16-9{
