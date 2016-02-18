@@ -1310,7 +1310,6 @@ ul, ol, dl, figure, small {
   margin-bottom: 0.75rem; }
 
 p {
-  max-width: 40em;
   opacity: 0.9; }
 
 small {
@@ -1493,6 +1492,12 @@ figcaption {
 .origin-b {
   transform-origin: bottom; }
 
+.origin-rt {
+  transform-origin: right top; }
+
+.origin-lb {
+  transform-origin: left bottom; }
+
 .ease-bounce {
   -webkit-transition: all 500ms cubic-bezier(0.68, 0, 0.265, 1);
   /* older webkit */
@@ -1508,6 +1513,18 @@ figcaption {
   -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* easeInOutBack */ }
+
+.ease-expo {
+  -webkit-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  -moz-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  -o-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  transition: all 500ms cubic-bezier(1, 0, 0, 1);
+  /* easeInOutExpo */
+  -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  /* easeInOutExpo */ }
 
 body {
   background-color: #FFF;
@@ -1549,7 +1566,7 @@ blockquote {
 
 .pane {
   overflow: hidden;
-  max-height: 100vh; }
+  max-height: 9999vh; }
   .pane.closed {
     max-height: 1px; }
 

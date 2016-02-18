@@ -52,13 +52,14 @@ blockquote{
   //display:none;
   //transition:.5s;
   overflow:hidden;
-  max-height:100vh;
+  max-height:9999vh;
   &.closed{
     max-height:1px;
   }
 }
 section{
   position:relative;
+  //overflow-x:hidden;
 }
 #WhatIsBB{
   //color:$white;

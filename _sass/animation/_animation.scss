@@ -25,7 +25,12 @@
 .origin-b{
   transform-origin:bottom;
 }
-
+.origin-rt{
+    transform-origin:right top;
+}
+.origin-lb{
+    transform-origin:left bottom;
+}
 
 .ease-bounce{
 -webkit-transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
@@ -39,4 +44,15 @@
    -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
      -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
         transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+.ease-expo{
+-webkit-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+   -moz-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+     -o-transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+        transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+
+-webkit-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+   -moz-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+     -o-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+        transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
 }
