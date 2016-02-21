@@ -1583,11 +1583,9 @@ body {
   margin-bottom: 0; }
 
 blockquote {
-  background-color: #ff0000;
   color: #FFF;
-  font-size: 2rem;
-  padding: 4rem;
-  font-weight: 600; }
+  font-size: 1.5rem;
+  padding: 1.5rem 0; }
 
 .pane {
   overflow: hidden;

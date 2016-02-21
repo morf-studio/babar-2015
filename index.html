@@ -166,23 +166,34 @@ layout: home
 
       </section>
 
-      <aside id="Scholarships" class="pane ease-expo bg-red">
+      <aside id="Scholarships" class=" ease-expo bg-red">
 
-        <article class="pad-y-xl pad-x-l float-center max-width-l">
+        <article class="pad-y-xl pad-x-l white">
           <h2>Scholarships</h2>
-          <p> Bike & Build continued to expand our scholarship program in 2015. For the first time, we offered scholarships for our cross-country rides. Kevin Pham (CUS) received a scholarship provided on behalf of the Chris Webber Memorial Fund.
-          </p>
-          <blockquote>
-            The best part about Bike & Build is the supportive alumni family that you become adopted into after the trip. When I meet up with riders from the other routes, they always radiate good vibes
-          </blockquote>
-          Kenya Wright (C2C) was a partial scholarship winner through the Patrick Zuza Scholarship. “I love Bike and Build!” Kenya said after the trip.
+          <p> Bike & Build continued to expand our scholarship program in 2015. For the first time, we offered scholarships for our cross-country rides. </p>
 
-          <blockquote>It gave me the greatest sense of accomplishment, challenged my mind and body to the extreme, and taught me how to genuinely support others.</blockquote>
+          <div class="grid cf">
+            <div class="col col-12 l-col-4">
+              Kevin Pham (CUS) received a scholarship provided on behalf of the Chris Webber Memorial Fund.
+              <blockquote>
+                The best part about Bike & Build is the supportive alumni family that you become adopted into after the trip. When I meet up with riders from the other routes, they always radiate good vibes
+              </blockquote>
 
-          Bernard Long was the recipient of the Bike & Build Drift Scholarship, earning support to complete Coastal Drift.
-          <blockquote>
-            Because of this trip, I was able to understand the importance of community, volunteering, listening, and the value of my work. I was able to interact with people that I normally would not meet and see places that I normally would not go to.
-          </blockquote>
+            </div>
+            <div class="col col-12 l-col-4">
+              Kenya Wright (C2C) was a partial scholarship winner through the Patrick Zuza Scholarship. “I love Bike and Build!” Kenya said after the trip.
+              <blockquote>It gave me the greatest sense of accomplishment, challenged my mind and body to the extreme, and taught me how to genuinely support others.</blockquote>
+
+            </div>
+            <div class="col col-12 l-col-4">
+              Bernard Long was the recipient of the Bike & Build Drift Scholarship, earning support to complete Coastal Drift.
+
+              <blockquote>
+                Because of this trip, I was able to understand the importance of community, volunteering, listening, and the value of my work. I was able to interact with people that I normally would not meet and see places that I normally would not go to.
+              </blockquote>
+            </div>
+
+          </div>
 
           <p> In 2016, Bike & Build anticipates offering between 3-5 scholarships once again. To donate, <a href="http://classic.bikeandbuild.org/rider/8894">click here</a>. </p>
 
@@ -191,21 +202,80 @@ layout: home
 
       <section id="Riding" class="pad-y-xl pad-b-xxl">
 
-        <div class="pad-x-l pad-y-xl float-center text-center max-width-l">
+        <div class="pad-x-l pad-y-xl max-width-l">
           <span class="story-icon"> <svg class="icon icon-map"> <use xlink:href="#icon-map"></use> </svg> </span>
-          <h1 class="story text-center"> Then they rode! </h1>
+          <h1 class="story"> Then they rode! </h1>
           <p class="unit caps">combined miles</p>
           <p class="number">1,021,000</p>
-          <div>
-            <img src="img/content/grayscale/miles.jpg" alt="">
-          </div>
+        </div>
           <figure>
-            <!-- MAP -->
+
+            <div id="routeMap"> </div>
+            <script>
+            Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173cb7bc0181897201ee6/2011_february_aa_flight_paths.csv', function(err, rows){
+              function unpack(rows, key) {
+                    return rows.map(function(row) { return row[key]; });}
+
+                function getMaxOfArray(numArray) {
+                    return Math.max.apply(null, numArray);
+                }
+
+                var data = [];
+                var count = unpack(rows, 'cnt');
+                var startLongitude = unpack(rows, 'start_lon');
+                var endLongitude = unpack(rows, 'end_lon');
+                var startLat = unpack(rows, 'start_lat');
+                var endLat = unpack(rows, 'end_lat');
+
+                for ( var i = 0 ; i < count.length; i++ ) {
+                    var opacityValue = count[i]/getMaxOfArray(count);
+
+                    var result = {
+                        type: 'scattergeo',
+                        //type: 'choropleth',
+                        locationmode: 'USA-states',
+
+                        lon: [ startLongitude[i] , endLongitude[i] ],
+                        lat: [ startLat[i] , endLat[i] ],
+                        mode: 'lines',
+                        line: {
+                            width: 2,
+                            color: '#ff4000'
+                        },
+                        opacity: opacityValue
+                    };
+
+                    data.push(result);
+                };
+
+                var layout = {
+                    title: '2015 Routes',
+                    showlegend: false,
+                    geo:{
+                        scope: 'usa',
+                        projection: {
+                            //type: 'azimuthal equal area'
+                            type: 'mercator'
+                            //type: 'robinson'
+                        },
+                        showland: true,
+                        landcolor: '#132756',
+                        countrycolor: 'rgb(204,204,204)'
+                    }
+                };
+
+                Plotly.plot(routeMap, data, layout, {displayLogo: false}, {displayModeBar: false}, {showLink: false}, {scrollZoom: true});
+
+              });
+            </script>
+
+
+
             <figcaption>
               <p> 2015 Routes </p>
             </figcaption>
           </figure>
-        </div>
+
         <div class="cf">
           <div class="absolute bottom-0 pad-m white bg-navy left-0">
             <a href="DriftExpansion" onclick="openDriftExpansion()" class="paneLink white"> Coastal Drift <span class="h1 align-middle bg-navy pad-x-s white circle"> + </span> </a>
@@ -432,11 +502,86 @@ layout: home
 
       </section>
       <section class="pad-y-xxl pad-x-l">
-        <h2>Affordable Housing Grants</h2>
         <figure>
-          <div class="chart">
+          <div id="ahGrants"> </div>
+          <!-- Table for grant data -->
+          <table>
+            <thead>
+              <th><h2>Affordable Housing Grants</h2></th>
+            </thead>
+            <tbody>
+              <tr> <td>Competitive Grant Program			           </td><td>$ 369,480 </td></tr>
+              <tr> <td>Pre-Arranged Partner Contributions			   </td><td>$ 100,251 </td></tr>
+              <tr> <td>Rider $500 Donations			                 </td><td>$ 99,750 </td></tr>
+              <tr> <td>On the Road Gifts			                   </td><td>$ 38,100 </td></tr>
+              <tr> <td>Alumni Council Emergency Grants			     </td><td>$ 10,000 </td></tr>
+              <tr> <td>CWM Contributions			                   </td><td>$ 19,730 </td></tr>
+              <tr> <td>Total Bike & Build Grants			           </td><td>$ 637,311 </td></tr>
+            </tbody>
+          </table>
+          Total Bike & Build Grants:  $ 637,311
+          <script>
+            var data = [{
+              values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+              labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+              type: 'pie',
+              marker: {
+                colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+              }
+            }];
 
-          </div>
+            var layout = {
+              height: 400,
+              width: 600
+            };
+
+            Plotly.newPlot('ahGrants', data, layout);
+          </script>
+          <script>
+
+          (function() {
+            var d3 = Plotly.d3;
+
+            var WIDTH_IN_PERCENT_OF_PARENT = 100,
+            HEIGHT_IN_PERCENT_OF_PARENT = 100;
+
+            var gd3 = d3.select('Expenses')
+            .append('div')
+            .style({
+                width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+                'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
+
+                height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
+                'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+            });
+
+            var gd = gd3.node();
+
+
+
+            Plotly.plot(gd, [{
+            type: 'bar',
+            x: [1, 2, 3, 4],
+            y: [5, 10, 2, 8],
+            marker: {
+                color: '#C8A2C8',
+                line: {
+                    width: 2.5
+                }
+            }
+            }], {
+            title: 'Auto-Resize',
+            font: {
+                size: 16
+            }
+            });
+
+            window.onresize = function() {
+            Plotly.Plots.resize(gd);
+            };
+
+            })();
+          </script>
           <figcaption>
 
           </figcaption>
@@ -445,7 +590,7 @@ layout: home
       <section class="pad-y-xxl pad-x-l">
         <h2>Program Expenses</h2>
         <figure>
-          <div class="chart">
+          <div id="Expenses">
 
           </div>
           <figcaption>
@@ -491,72 +636,22 @@ layout: home
       </section>
 </div>
 
-<script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<div id="myDiv" style="width: 480px; height: 380px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script>
-
-(function() {
-  var d3 = Plotly.d3;
-
-  var WIDTH_IN_PERCENT_OF_PARENT = 100,
-      HEIGHT_IN_PERCENT_OF_PARENT = 100;
-
-  var gd3 = d3.select('body')
-      .append('div')
-      .style({
-          width: WIDTH_IN_PERCENT_OF_PARENT + '%',
-          'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
-
-          height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
-          'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
-      });
-
-  var gd = gd3.node();
-
-  var data = [{
-  values: [19, 26, 55],
-  labels: ['Residential', 'Non-Residential', 'Utility'],
-  type: 'pie'
-  }];
-
-  var layout = {
-  height: 400,
-  width: 500
-  };
-
-  window.onresize = function() {
-      Plotly.Plots.resize(gd);
-  };
-
-  }) ();
-
-  Plotly.newPlot('myDiv', data, layout);
-</script>
-
-<!-- <button onclick="myFunction()">Click me</button> -->
-<script>
-  //var idOfBtn = document.getElementById("openWhatIsBB");
-
+// Open & Close Additional Content Sections
   var panes = document.getElementsByClassName('pane');
   var i;
   for (i = 0; i < panes.length; i++) {
       panes[i].classList.add("closed");
   }
-
   var panelinks = document.getElementsByClassName('paneLink');
   var j;
   for (j = 0; j < panelinks.length; j++){
       var paneID = panelinks[j].getAttribute("href");
-      //console.log(paneID);
-      // var actionID = document.getElementByID(paneID);
       panelinks[j].addEventListener("click", function(event){
         event.preventDefault();
-        //paneID.classList.toggle("closed");
     });
   }
-
-
   function openMessage(){
     document.getElementById("Message").classList.toggle("closed");
   }
@@ -575,10 +670,4 @@ layout: home
   function openGrantingImpact(){
     document.getElementById("GrantingImpact").classList.toggle("closed");
   }
-
-  //document.getElementById("openWhatIsBB").addEventListener("click", function(event){
-  //  idOfContainer.classList.toggle("closed");
-  //});
-
-
 </script>
