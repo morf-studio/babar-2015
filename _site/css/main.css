@@ -978,6 +978,17 @@ dl, dd, ol, ul, figure {
 .flex-wrap {
   flex-wrap: wrap; }
 
+.flex-row {
+  flex-direction: row; }
+
+@media screen and (min-width: 48em) {
+  .m-flex-row {
+    flex-direction: row; } }
+
+@media screen and (min-width: 64em) {
+  .l-flex-row {
+    flex-direction: row; } }
+
 .items-start {
   align-items: flex-start; }
 

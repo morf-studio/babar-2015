@@ -49,6 +49,17 @@
 
 .flex-column  { flex-direction: column }
 .flex-wrap    { flex-wrap: wrap }
+.flex-row     { flex-direction:row }
+.m-flex-row   {
+  @include breakpoint(m) {
+    flex-direction:row;
+  };
+}
+.l-flex-row   {
+  @include breakpoint(l) {
+    flex-direction:row;
+  };
+}
 
 .items-start    { align-items: flex-start }
 .items-end      { align-items: flex-end }
