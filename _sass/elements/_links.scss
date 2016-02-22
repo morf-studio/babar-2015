@@ -35,3 +35,19 @@ a.button{
     //box-shadow: 0 0 0 4px black;
   }
 }
+a.button-white{
+  transition: background-color .3s;
+  text-decoration:none;
+  color: white;
+  padding:$space-s $space-m;
+  box-shadow: 0 0 0 2px white;
+  padding:$space-s $space-m;
+  &:hover{
+    background-color:$white10;
+    //box-shadow: 0 0 0 4px black;
+  }
+  &:active{
+    background-color:$black10;
+    //box-shadow: 0 0 0 4px black;
+  }
+}

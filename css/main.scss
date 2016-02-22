@@ -8,13 +8,29 @@
         "base"
 ;
 
+.visible-grid{
+  background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
+  background-repeat: repeat-x;
+  background-size: 16.6666667% 100%;
+  margin:0 2rem;
+  //@media screen and (min-width:$tablet){
+    //background-size: 100% 30px;
+  //20px x 1.5 = 30px
+  //}
+  // background-image:repeating-linear-gradient(
+  //
+  // );
+}
 body{
+  background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
+  background-repeat: repeat-y;;
+  background-size:100% 1.5em;
   background-color:$white;
   color:$navy;
   //border-left:2rem solid $red;
 }
 #Story{
-  border-left:2px solid $navy;
+  //border-left:2px solid $navy;
 }
 .story{
   //margin-top:2em;
@@ -22,16 +38,16 @@ body{
   line-height:1;
   position:relative;
   &:before{
-    display:block;
-    content:'';
-    border-top:2px solid $navy;
-    width:.75em;
-    position:absolute;
-    top:-2rem;
-    left:-1em;
-    @include breakpoint(m) {
-      top:-2.5rem
-    };
+    //display:block;
+    //content:'';
+    //border-top:2px solid $navy;
+    //width:.75em;
+    //position:absolute;
+    //top:-2rem;
+    //left:-1em;
+    //@include breakpoint(m) {
+    //  top:-2.5rem
+    //};
   }
 }
 .number{

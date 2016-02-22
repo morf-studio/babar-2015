@@ -1457,6 +1457,18 @@ a.button {
   a.button:active {
     background-color: rgba(0, 0, 0, 0.1); }
 
+a.button-white {
+  transition: background-color .3s;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 0 2px white;
+  padding: 0.5rem 1rem; }
+  a.button-white:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+  a.button-white:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
 /**
  * Images
  */
@@ -1553,28 +1565,23 @@ td {
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */ }
 
+.visible-grid {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1.5px);
+  background-repeat: repeat-x;
+  background-size: 16.6666667% 100%;
+  margin: 0 2rem; }
+
 body {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1.5em;
   background-color: #FFF;
   color: #132756; }
-
-#Story {
-  border-left: 2px solid #132756; }
 
 .story {
   margin-bottom: 3rem;
   line-height: 1;
   position: relative; }
-  .story:before {
-    display: block;
-    content: '';
-    border-top: 2px solid #132756;
-    width: .75em;
-    position: absolute;
-    top: -2rem;
-    left: -1em; }
-    @media screen and (min-width: 48em) {
-      .story:before {
-        top: -2.5rem; } }
 
 .number {
   font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
