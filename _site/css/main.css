@@ -178,6 +178,15 @@ dl, dd, ol, ul, figure {
 .white-9 {
   color: rgba(255, 255, 255, 0.9); }
 
+.drop-shadow-high {
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.2); }
+
+.drop-shadow-med {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2); }
+
+.drop-shadow-low {
+  box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.15); }
+
 .col-1 {
   width: calc( 1 / 12 * 100% ); }
 
@@ -1315,12 +1324,9 @@ ul, ol, dl, figure, small {
   margin-top: 0;
   margin-bottom: 0.75rem; }
 
-p {
-  opacity: 0.9; }
-
 small {
   font-size: 0.875rem;
-  opacity: 0.6; }
+  opacity: 0.75; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "canada-type-gibson", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1348,7 +1354,7 @@ h3 {
       font-size: 1.5rem; } }
 
 li {
-  padding: 0.5rem; }
+  padding-bottom: 0.5rem; }
 
 /**
  * Lists
@@ -1362,8 +1368,8 @@ li > ol {
   margin-bottom: 0; }
 
 .list-reset {
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none; }
 
 dl {

@@ -59,17 +59,19 @@ layout: home
           </div>
         </div>
 
-        <div class="cf absolute left-0 bottom-0">
+        <!-- <div class="cf absolute left-0 bottom-0">
           <div class="bg-red white pad-m">
             <a href="#WhatIsBB" onclick="openWhatIsBB()" class="paneLink white">Wait, what is Bike &amp; Build? </a>
-            <!-- <span class="h1 align-middle bg-red pad-x-s white circle"> + </span> -->
           </div>
-        </div>
+        </div> -->
 
         <!-- <button class="btn-circle bg-red white"> What is B&amp;B? </button> -->
       </section>
       <aside id="WhatIsBB" class="ease-expo pad-m">
         <article class="max-width-l float-center pad-m bg-red white">
+          <div class="col col-12 pad-m">
+            <p> <strong>Bike &amp; Build</strong><br>A Primer. </p>
+          </div>
           <div class="col col-12 pad-m">
             <div class="videoWrapper ratio-16-9">
               <iframe width="640" height="360" src="https://www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -167,28 +169,35 @@ layout: home
       </section>
 
       <aside id="Scholarships" class=" ease-expo">
-
         <article class="pad-y-xl pad-x-l bg-red white">
-          <div class="mar-x-s">
-            <h2>Scholarships</h2>
-            <p class="measure"> Bike & Build continued to expand our scholarship program in 2015. For the first time, we offered scholarships for our cross-country rides. </p>
+
+          <div class="grid cf">
+            <div class="col col-12 pad-x-s">
+              <h2>Scholarships</h2>
+            </div>
+            <div class="col s-col-6 l-col-4 pad-x-s">
+              <p class="measure"> Bike & Build continued to expand our scholarship program in 2015. For the first time, we offered scholarships for our cross-country rides. </p>
+            </div>
+            <div class="col s-col-6 l-col-4 pad-x-s">
+              <p> In 2016, Bike & Build anticipates offering between 3-5 scholarships once again. To donate, <a href="http://classic.bikeandbuild.org/rider/8894" class="white">click here</a>. </p>
+            </div>
           </div>
 
           <div class="grid cf white flex flex-column l-flex-row">
-            <div class="col col-12 l-col-4 bg-white red pad-m mar-s">
+            <div class="col col-12 l-col-4 bg-white red pad-m mar-s drop-shadow-med">
               <img src="img/content/scholarships/kevin_pham_red.jpg" alt="" />
               <blockquote class="red">
                 The best part about Bike & Build is the supportive alumni family that you become adopted into after the trip. When I meet up with riders from the other routes, they always radiate good vibes.
               </blockquote>
               <p> <strong>Kevin Pham</strong> (CUS) received a scholarship provided on behalf of the Chris Webber Memorial Fund.</p>
             </div>
-            <div class="col col-12 l-col-4 bg-white red pad-m mar-s">
+            <div class="col col-12 l-col-4 bg-white red pad-m mar-s drop-shadow-med">
               <img src="img/content/scholarships/kenya_wright_red.jpg" alt="" />
               <!-- “I love Bike and Build!” Kenya said after the trip. -->
               <blockquote class="red">It gave me the greatest sense of accomplishment, challenged my mind and body to the extreme, and taught me how to genuinely support others.</blockquote>
               <p> <strong>Kenya Wright</strong>(C2C) was a partial scholarship winner through the Patrick Zuza Scholarship.</p>
             </div>
-            <div class="col col-12 l-col-4 bg-white red pad-m mar-s">
+            <div class="col col-12 l-col-4 bg-white red pad-m mar-s drop-shadow-med">
               <img src="img/content/scholarships/bernard_long_red.jpg" alt="" />
               <blockquote class="red">
                 Because of this trip, I was able to understand the importance of community, volunteering, listening, and the value of my work. I was able to interact with people that I normally would not meet and see places that I normally would not go to.
@@ -198,9 +207,7 @@ layout: home
             </div>
 
           </div>
-          <div class="mar-x-s">
-            <p> In 2016, Bike & Build anticipates offering between 3-5 scholarships once again. To donate, <a href="http://classic.bikeandbuild.org/rider/8894" class="white">click here</a>. </p>
-          </div>
+
         </article>
       </aside>
 
@@ -213,92 +220,134 @@ layout: home
           <p class="number">1,021,000</p>
         </div>
           <figure>
+            <img class="float-center max-width-l" src="img/content/map/2016map_onwhite.jpg" alt="">
+            <figcaption>
+              <div class="grid cf">
+                <div class="col col-12 m-col-3 pad-x-m">
+                  <p> <strong>2015 Routes</strong> </p>
+                </div>
+                <div class="col col-12 m-col-3 pad-x-m">
+                  <ul class="list-reset">
+                    <li>Northern United States, NUS </li>
+                    <li>Maine to Santa Barbara, ME2SB </li>
+                    <li>Providence To Seattle, P2S</li>
+                    <li>Central United States, CUS </li>
+                  </ul>
+                </div>
+                <div class="col col-12 m-col-3 pad-x-m">
+                  <ul class="list-reset">
+                    <li>Connecticut to California, C2C </li>
+                    <li>North Carolina to San Diego, NC2SD </li>
+                    <li>South Carolina to Santa Cruz, SC2SC </li>
+                    <li>Southern United States, SUS </li>
+                  </ul>
+                </div>
+                <div class="col col-12 m-col-3 pad-x-m">
+                  <ul class="list-reset">
+                    <li>Coastal Drift, CD</li>
+                    <li>Drift West, DW</li>
+                    <li>Chris Webber Memorial, CWM</li>
+                  </ul>
+                </div>
 
-            <div id="routeMap"> </div>
+              </div>
+            </figcaption>
+
+
+            <!-- <div id="routeMap"> </div> -->
             <script>
-            Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173cb7bc0181897201ee6/2011_february_aa_flight_paths.csv', function(err, rows){
-              function unpack(rows, key) {
-                    return rows.map(function(row) { return row[key]; });}
-
-                function getMaxOfArray(numArray) {
-                    return Math.max.apply(null, numArray);
-                }
-
-                var data = [];
-                var count = unpack(rows, 'cnt');
-                var startLongitude = unpack(rows, 'start_lon');
-                var endLongitude = unpack(rows, 'end_lon');
-                var startLat = unpack(rows, 'start_lat');
-                var endLat = unpack(rows, 'end_lat');
-
-                for ( var i = 0 ; i < count.length; i++ ) {
-                    var opacityValue = count[i]/getMaxOfArray(count);
-
-                    var result = {
-                        type: 'scattergeo',
-                        //type: 'choropleth',
-                        locationmode: 'USA-states',
-
-                        lon: [ startLongitude[i] , endLongitude[i] ],
-                        lat: [ startLat[i] , endLat[i] ],
-                        mode: 'lines',
-                        line: {
-                            width: 2,
-                            color: '#ff4000'
-                        },
-                        opacity: opacityValue
-                    };
-
-                    data.push(result);
-                };
-
-                var layout = {
-                    title: '2015 Routes',
-                    showlegend: false,
-                    geo:{
-                        scope: 'usa',
-                        projection: {
-                            //type: 'azimuthal equal area'
-                            type: 'mercator'
-                            //type: 'robinson'
-                        },
-                        showland: true,
-                        landcolor: '#132756',
-                        countrycolor: 'rgb(204,204,204)'
-                    }
-                };
-
-                Plotly.plot(routeMap, data, layout, {displayLogo: false}, {displayModeBar: false}, {showLink: false}, {scrollZoom: true});
-
-              });
+            // Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173cb7bc0181897201ee6/2011_february_aa_flight_paths.csv', function(err, rows){
+            //   function unpack(rows, key) {
+            //         return rows.map(function(row) { return row[key]; });}
+            //
+            //     function getMaxOfArray(numArray) {
+            //         return Math.max.apply(null, numArray);
+            //     }
+            //
+            //     var data = [];
+            //     var count = unpack(rows, 'cnt');
+            //     var startLongitude = unpack(rows, 'start_lon');
+            //     var endLongitude = unpack(rows, 'end_lon');
+            //     var startLat = unpack(rows, 'start_lat');
+            //     var endLat = unpack(rows, 'end_lat');
+            //
+            //     for ( var i = 0 ; i < count.length; i++ ) {
+            //         var opacityValue = count[i]/getMaxOfArray(count);
+            //
+            //         var result = {
+            //             type: 'scattergeo',
+            //             //type: 'choropleth',
+            //             locationmode: 'USA-states',
+            //
+            //             lon: [ startLongitude[i] , endLongitude[i] ],
+            //             lat: [ startLat[i] , endLat[i] ],
+            //             mode: 'lines',
+            //             line: {
+            //                 width: 2,
+            //                 color: '#ff4000'
+            //             },
+            //             opacity: opacityValue
+            //         };
+            //
+            //         data.push(result);
+            //     };
+            //
+            //     var layout = {
+            //         title: '2015 Routes',
+            //         showlegend: false,
+            //         geo:{
+            //             scope: 'usa',
+            //             projection: {
+            //                 //type: 'azimuthal equal area'
+            //                 type: 'mercator'
+            //                 //type: 'robinson'
+            //             },
+            //             showland: true,
+            //             landcolor: '#132756',
+            //             countrycolor: 'rgb(204,204,204)'
+            //         }
+            //     };
+            //
+            //     Plotly.plot(routeMap, data, layout, {displayLogo: false}, {displayModeBar: false}, {showLink: false}, {scrollZoom: true});
+            //
+            //   });
             </script>
 
-
-
-            <figcaption>
-              <p> 2015 Routes </p>
-            </figcaption>
           </figure>
 
-        <div class="cf">
+        <!-- <div class="cf">
           <div class="absolute bottom-0 pad-m white bg-navy left-0">
             <a href="DriftExpansion" onclick="openDriftExpansion()" class="paneLink white"> Coastal Drift <span class="h1 align-middle bg-navy pad-x-s white circle"> + </span> </a>
           </div>
           <div class="absolute bottom-0 pad-m white bg-red right-0">
               <a href="YouthBuild" onclick="openYouthBuild()" class="paneLink white"> YouthBuild <span class="h1 align-middle bg-red pad-x-s white circle"> + </span> </a>
           </div>
-        </div>
+        </div> -->
 
 
       </section>
-      <aside id="DriftExpansion" class="pane ease-expo bg-navy white">
-        <article class="pad-y-xl pad-x-l float-center max-width-l">
-        <h2> Drift Expansion </h2>
-        <p> In 2015, the East Coast vs. West Coast rivalry became even more fierce. Building on the success of Coastal Drift, Bike &amp; Build’s three-week regional route in New England, we developed Drift West – a route that mirrors the Coastal Drift model and runs from Portland, OR to Bellingham, WA. Drift West quickly actualized into a three-week powerhouse – the roster was full, the scenery was impeccable, five new and unique affordable housing organizations were tapped, and, like its predecessor, Drift West re-engaged alumni and attracted new riders who otherwise would be unable to participate in Bike & Build. Unphased by its friendly rival, Coastal Drift avoided the proverbial sophomore slump as it bounded down the East Coast with great success. One summer, two Drifts. Catch your breath and catch the Drift.
+
+      <aside id="DriftExpansion" class="ease-expo bg-navy white">
+        <article class="pad-y-xl pad-x-l">
+          <div class="grid cf">
+            <div class="col col-12 m-col-4">
+              <img src="img/content/grayscale/miles.jpg" alt="">
+            </div>
+          </div>
+          <div class="grid cf">
+            <div class="col m-col-4">
+              <h2> Drift Expansion </h2>
+            </div>
+            <div class="col m-col-8">
+              <p> In 2015, the East Coast vs. West Coast rivalry became even more fierce. Building on the success of Coastal Drift, Bike &amp; Build’s three-week regional route in New England, we developed Drift West – a route that mirrors the Coastal Drift model and runs from Portland, OR to Bellingham, WA. Drift West quickly actualized into a three-week powerhouse – the roster was full, the scenery was impeccable, five new and unique affordable housing organizations were tapped, and, like its predecessor, Drift West re-engaged alumni and attracted new riders who otherwise would be unable to participate in Bike & Build. Unphased by its friendly rival, Coastal Drift avoided the proverbial sophomore slump as it bounded down the East Coast with great success. One summer, two Drifts. Catch your breath and catch the Drift.
+            </div>
+          </div>
+
         </article>
       </aside>
-      <aside id="YouthBuild" class="pane ease-expo bg-red white">
+      <aside id="YouthBuild" class=" ease-expo bg-red white">
         <article class="pad-y-xl pad-x-l float-center max-width-l">
+          <img src="img/content/youthbuild/youthbuild_group_red.jpg" alt="">
           <h2> YouthBuild Ride </h2>
           <p> As part of continued efforts to promote diversity on Bike & Build trips and expand our programming to underserved young adults, in 2015 we partnered with YouthBuild Philadelphia to create Bike & YouthBuild. YouthBuild is a natural partner for Bike & Build: it provides high school dropouts with a chance to earn their diplomas while learning job skills in valuable community services, particularly building affordable homes for low-income Philadelphia residents.</p>
           <p>Staff and students of YB Philly came together with B&B alums throughout the spring on local bike trails and YouthBuild construction sites. The program culminated in May with four days of riding and building in both Philadelphia and Washington, DC. (A special thank you to Fairmount Bicycles for donating bikes for the students to rent throughout the program.) In total, 27 YBers and B&Bers pedaled 800 cumulative miles.</p>
@@ -340,7 +389,7 @@ layout: home
         <div class="pad-x-l">
           <span class="story-icon"> <svg class="icon icon-pie-graph"> <use xlink:href="#icon-pie-graph"></use> </svg> </span>
 
-          <h1 class="story max-width-m">They awarded grants from their collective funds</h1>
+          <h1 class="story max-width-m">They awarded grants from their collective fundraising</h1>
         </div>
         <div class="grid cf">
           <div class="col m-col-6 pad-x-l">
@@ -352,15 +401,17 @@ layout: home
             <p class="number">380 </p>
           </div>
         </div>
-        <div>
+        <!-- <div>
           <img src="img/content/blue/victory169.jpg" alt="">
-        </div>
+        </div> -->
 
+      <div class="bg-red white">
+        <article class="max-width-m float-center mar-y-xl pad-l">
+          <h2> Interested in applying for a Bike & Build Grant? </h2>
+          <p> We fund projects that engage young adults in addressing a demonstrated need in affordable housing. 2016 applications will be available in April and due Friday, June 3. We accept requests from 501(c)(3) organizations between $500 and $10,000. Visit <a href="http://bikeandbuild.org/why-we-ride/" class="white">bikeandbuild.org/why-we-ride/</a> for application materials.</p>
+        </article>
+      </div>
 
-          <article class="bg-red white max-width-m float-center mar-y-xl pad-l">
-            <h2> Interested in applying for a Bike & Build Grant? </h2>
-            <p> We fund projects that engage young adults in addressing a demonstrated need in affordable housing. 2016 applications will be available in April and due Friday, June 3. We accept requests from 501(c)(3) organizations between $500 and $10,000. Visit <a href="http://bikeandbuild.org/why-we-ride/" class="white">bikeandbuild.org/why-we-ride/</a> for application materials.</p>
-          </article>
 
 
       </section>
@@ -465,7 +516,7 @@ layout: home
         </header>
       </section>
 
-      <section class="pad-y-xxl pad-x-l">
+      <section id="Statement" class="pad-y-xxl pad-x-l">
         <div class="text-center">
           <h2> 2015 | 2014 </h2>
         </div>
@@ -505,7 +556,7 @@ layout: home
 
 
       </section>
-      <section class="pad-y-xxl pad-x-l">
+      <section id="Grants" class="pad-y-xxl pad-x-l">
         <figure>
           <div id="ahGrants"> </div>
           <!-- Table for grant data -->
@@ -539,7 +590,7 @@ layout: home
               width: 600
             };
 
-            Plotly.newPlot('ahGrants', data, layout);
+            Plotly.newPlot('ahGrants', data, layout, {displayModeBar: false});
           </script>
           <script>
 
@@ -591,14 +642,32 @@ layout: home
           </figcaption>
         </figure>
       </section>
-      <section class="pad-y-xxl pad-x-l">
+      <section id="Expenses" class="pad-y-xxl pad-x-l">
         <h2>Program Expenses</h2>
         <figure>
           <div id="Expenses">
-
+            <table>
+              <thead>
+                <tr><th></th></tr>
+              </thead>
+              <tbody>
+                <tr> <td> Contributions			              </td><td> $637,311</td></tr>
+                <tr> <td> Trip Gear, Activities			      </td><td> $311,657</td></tr>
+                <tr> <td> Salaries, Benefits, Stipends			</td><td> $163,602</td></tr>
+                <tr> <td> Auto			                        </td><td> $64,149</td></tr>
+                <tr> <td> Insurance			                  </td><td> $16,225</td></tr>
+                <tr> <td> Technology			                  </td><td> $14,383</td></tr>
+                <tr> <td> Director Travel			            </td><td> $5,976</td></tr>
+                <tr> <td> Depreciation			                </td><td> $47,015</td></tr>
+                <tr> <td> Other			                      </td><td> $3,581</td></tr>
+                <tr> <td> Total Expenses			              </td><td> $1,263,899</td></tr>
+              </tbody>
+            </table>
           </div>
           <figcaption>
-
+              <blockquote cite="">
+                80.4% of money raised goes directly to support Bike & Build's mission.
+              </blockquote>
           </figcaption>
         </figure>
       </section>
@@ -607,6 +676,19 @@ layout: home
         <figure>
           <div class="chart">
 
+            <table>
+              <tbody>
+                <tr> <td>2007</td> <td>$394,998</td> </tr>
+                <tr> <td>2008</td> <td>$494,609</td> </tr>
+                <tr> <td>2009</td> <td>$740,044</td> </tr>
+                <tr> <td>2010</td> <td>$563,569</td> </tr>
+                <tr> <td>2011</td> <td>$608,023</td> </tr>
+                <tr> <td>2012</td> <td>$648,857</td> </tr>
+                <tr> <td>2013</td> <td>$468,640</td> </tr>
+                <tr> <td>2014</td> <td>$613,264</td> </tr>
+                <tr> <td>2015</td> <td>$637,311</td> </tr>
+              </tbody>
+            </table>
           </div>
           <figcaption>
 
@@ -615,28 +697,48 @@ layout: home
       </section>
 </div>
 
-<div id="Onward" class="pad-y-xxl pad-x-l">
+<div id="Onward">
   <!-- On to 2016 -->
-      <section>
+      <section class="pad-y-xxl pad-x-l">
         <div class="text-center">
           <h1 class="caps bold"> On to </h1>
           <h1 class="number">2016</h1>
         </div>
-        <h2>Get Involved</h2>
-        <p> Interested in partnering with Bike & Build? Check out our <a href="http://bikeandbuild.org">website</a> to learn more. </p>
-        <p> A special thanks to our 2015 partners, for all of their support of our riders and build partners. We couldn’t have done it without you!</p>
-        <p>
-          <a href="" class="button">Apply</a> <a href="" class="button">Contact Us</a>
-        </p>
-        <p> Read our 2016&ndash;2018 <a href="">strategic plan.</a> </p>
+        <div class="grid cf">
+            <div class="col col-12 m-col-3">
+              <h2>Get Involved</h2>
+            </div>
+            <div class="col col-12 m-col-3">
+              <ul class="list-reset">
+                <li> <a class="red" href="http://bikeandbuild.org/apply"> Apply </a> </li>
+                <li> <a class="red" href="mailto:info@abikeandbuild.org"> Contact Us</a> </li>
+                <li> <a class="red" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan </a> </li>
+              </ul>
+            </div>
+            <div class="col col-12 m-col-3">
+              <p> Interested in partnering with Bike & Build? Check out our <a class="red" href="http://bikeandbuild.org">website</a> to learn more. </p>
+              <p> A special thanks to our 2015 partners, for all of their support of our riders and build partners. We couldn’t have done it without you!</p>
+            </div>
+            <div class="col col-12 m-col-3">
+              <img src="img/content/partners/partners_blue.jpg" alt="">
 
-        <h2>Connect</h2>
-        <ul class="list-reset grid">
-          <li class="col col-3"> <a href="http://instagram.com/bikebuild" target=_blank> </a> </li>
-          <li class="col col-3"> <a href="http://twitter.com/bikebuild" target=_blank> </a> </li>
-          <li class="col col-3"> <a href="http://facebook.com/bikebuild" target=_blank> </a> </li>
-          <li class="col col-3"> <a href="http://youtube.com/bikebuild" target=_blank> </a> </li>
-        </ul>
+            </div>
+        </div>
+
+
+        <div class="grid cf">
+          <div class="col m-col-3">
+            <h2>Connect</h2>
+          </div>
+          <div class="col m-col-3">
+            <ul class="list-reset">
+              <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
+              <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
+              <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
+              <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
+            </ul>
+          </div>
+        </div>
       </section>
 </div>
 
