@@ -1632,3 +1632,6 @@ section {
     .fundraiser-name {
       transform: rotate(45deg);
       transform-origin: 20% 200%; } }
+
+#Financials {
+  border-top: 2px #ff0000 solid; }
