@@ -49,6 +49,22 @@
 
 .flex-column  { flex-direction: column }
 .flex-wrap    { flex-wrap: wrap }
+.flex-row     { flex-direction:row }
+.m-flex-row   {
+  @include breakpoint(m) {
+    flex-direction:row;
+  };
+}
+.l-flex-row   {
+  @include breakpoint(l) {
+    flex-direction:row;
+  };
+}
+.xl-flex-row   {
+  @include breakpoint(xl) {
+    flex-direction:row;
+  };
+}
 
 .items-start    { align-items: flex-start }
 .items-end      { align-items: flex-end }
@@ -154,12 +170,7 @@ $width-xxxl: 128rem;
    * Aspect Ratio Control on divs with no, or variable content.
    */
   @mixin ratio($width,$height){
-  	&:before{
-  		content:' ';
-  		display:block;
-      //position:absolute; // remove this when needed
-  		padding-top: ($height / $width) * 100%;
-  	}
+    padding-top: ($height / $width) * 100%;
   }
 
   .ratio-16-9{
