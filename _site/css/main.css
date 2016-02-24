@@ -1635,3 +1635,7 @@ section {
 
 #Financials {
   border-top: 2px #ff0000 solid; }
+
+#logo {
+  width: 4rem;
+  height: auto; }
