@@ -690,6 +690,14 @@ dl, dd, ol, ul, figure {
   padding-left: 16rem;
   padding-right: 16rem; }
 
+.pad-x-scaled {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media screen and (min-width: 48em) {
+    .pad-x-scaled {
+      padding-left: calc( 8.777777% + 1rem );
+      padding-right: calc( 8.777777% + 1rem ); } }
+
 .mar-0 {
   margin: 0; }
 
@@ -996,6 +1004,10 @@ dl, dd, ol, ul, figure {
 
 @media screen and (min-width: 64em) {
   .l-flex-row {
+    flex-direction: row; } }
+
+@media screen and (min-width: 96em) {
+  .xl-flex-row {
     flex-direction: row; } }
 
 .items-start {
@@ -1589,7 +1601,7 @@ body {
   color: #ff0000;
   line-height: .875;
   margin-bottom: 3rem;
-  margin-left: -.75rem;
+  margin-left: -.01em;
   letter-spacing: -.25rem; }
   @media screen and (min-width: 48em) {
     .number {

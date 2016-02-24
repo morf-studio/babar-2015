@@ -58,6 +58,14 @@
 .pad-x-xxl{padding-left:$space-xxl;padding-right:$space-xxl;}
 .pad-x-xxxl{padding-left:$space-xxxl;padding-right:$space-xxxl;}
 
+.pad-x-scaled{
+  padding-left:$space-l;
+  padding-right:$space-l;
+  @include breakpoint(m) {
+    padding-left:calc( 8.777777% + #{$space-m} );
+    padding-right:calc( 8.777777% + #{$space-m} );
+  };
+}
 
 //Margins
 .mar-0 {margin:0;}
