@@ -65,7 +65,7 @@ body{
   color:$red;
   line-height:.875;
   margin-bottom:3rem;
-  margin-left: -.01em;
+  margin-left: -.035em;
   letter-spacing: -.25rem;
 }
 .unit{
@@ -75,11 +75,24 @@ body{
 }
 blockquote{
   //background-color:$red;
-  color:$white;
-  font-size:1.5rem;
-  padding:1.5rem 0;
+  //color:$white;
+  font-size:1.25rem;
+  line-height:1.5rem;
+  //padding:1.5rem 0;
   //padding:4rem;
   //font-weight:600;
+  position:relative;
+  margin-left:3rem;
+  &:before{
+    position:absolute;
+    display:block;
+    content:'“';
+    font-family:$condensed-font-family;
+    font-size:8rem;
+    left:-3rem;
+    top:3rem;
+    opacity:.5;
+  }
 }
 
 .pane{

@@ -121,7 +121,10 @@ p {
 }
 small{
   font-size:0.875rem;
-  opacity:0.75;
+  display:block;
+  line-height:1.5rem;
+  margin-top:0.125rem;
+  //opacity:0.75;
 }
 
 @import

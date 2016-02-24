@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   BOX SIZING
 
@@ -1338,7 +1339,9 @@ ul, ol, dl, figure, small {
 
 small {
   font-size: 0.875rem;
-  opacity: 0.75; }
+  display: block;
+  line-height: 1.5rem;
+  margin-top: 0.125rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "canada-type-gibson", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1601,7 +1604,7 @@ body {
   color: #ff0000;
   line-height: .875;
   margin-bottom: 3rem;
-  margin-left: -.01em;
+  margin-left: -.035em;
   letter-spacing: -.25rem; }
   @media screen and (min-width: 48em) {
     .number {
@@ -1619,9 +1622,19 @@ body {
   margin-bottom: 0; }
 
 blockquote {
-  color: #FFF;
-  font-size: 1.5rem;
-  padding: 1.5rem 0; }
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  position: relative;
+  margin-left: 3rem; }
+  blockquote:before {
+    position: absolute;
+    display: block;
+    content: '“';
+    font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    font-size: 8rem;
+    left: -3rem;
+    top: 3rem;
+    opacity: .5; }
 
 .pane {
   overflow: hidden;
