@@ -1636,6 +1636,7 @@ section {
 #Financials {
   border-top: 2px #ff0000 solid; }
 
-#logo {
+.site-title #logo {
   width: 4rem;
-  height: auto; }
+  height: auto;
+  display: block; }

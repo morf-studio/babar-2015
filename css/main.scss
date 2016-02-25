@@ -119,7 +119,11 @@ section{
   border-top: 2px $red solid;
 }
 
-#logo {
-  width: 4rem;
-  height: auto;
+.site-title {
+
+  #logo {
+    width: 4rem;
+    height: auto;
+    display: block;
+  }
 }

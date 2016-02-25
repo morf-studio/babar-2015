@@ -3,9 +3,8 @@
 
   <div class="wrapper">
 
-    <a class="site-title absolute top-l left-l" href="{{ site.baseurl }}/">
-      <!-- {{ site.title }} -->
-      <img id="logo"src="img/ui/bb-logo-transparent.png" alt="">
+    <a class="site-title pad-r-m" href="{{ site.baseurl }}/">
+      <img id="logo" src="img/ui/bb-logo-transparent.png" alt="" />
     </a>
 
     <nav class="site-nav">
@@ -20,14 +19,13 @@
       <div class="trigger">
         {% for page in site.pages %}
           {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-            <!-- {{ page.title }} -->
-            <h1>BIKE BUILD</h1>
-          </a>
+          <a class="page-link pad-m" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>
-      <a href="/financial.html">Audited Financials</a>
+
+      <a href="#Apply-Now">Want to Apply?</a>
+
     </nav>
 
   </div>
