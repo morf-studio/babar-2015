@@ -68,6 +68,13 @@ body{
   margin-left: -.035em;
   letter-spacing: -.25rem;
 }
+.medium-number{
+  font-family:$condensed-font-family;
+  font-size:4rem;
+  line-height:.875;
+  margin-bottom:0;
+  margin-left: -.035em;
+}
 .unit{
   color:$red;
   font-weight:600;

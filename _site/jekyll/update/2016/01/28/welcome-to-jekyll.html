@@ -47,7 +47,7 @@
 
 
   <body>
-    <!-- <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-eye" viewBox="0 0 1024 1024">
 <title>eye</title>
@@ -107,39 +107,36 @@
 </symbol>
 </defs>
 </svg>
- -->
-    <!-- 
-<header class="site-header">
 
+    
+<header class="site-header relative z3">
   <div class="wrapper">
-
-    <a class="site-title" href="/">B&B 2015</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
+    <div class="absolute top-0 left-0 mar-l col-2 s-col-1">
+        <img src="../img/ui/bb-logo-transparent.png" alt="">
+    </div>
+    <nav class="absolute top-l right-0 site-nav mar-l">
         
+          
+            <a class="page-link mar-l-l navy" href="/financials/"> Financials </a>
+          
+        
+          
+            <a class="page-link mar-l-l navy" href="/index.html"> 2015 Review </a>
           
         
           
         
-      </div>
     </nav>
-
   </div>
-
 </header>
- -->
 
-    <div class="page-content">
-      <div class="wrapper">
+<!-- Intro -->
+<div class="fixed visible-grid top-0 bottom-0 left-0 right-0 z1">
+
+</div>
+
+
+    <div class="main wrap">
         <div class="post">
 
   <header class="post-header">
@@ -167,40 +164,92 @@
 
 </div>
 
-      </div>
     </div>
 
-    <footer class="site-footer">
+    <div id="Onward">
+  <!-- On to 2016 -->
+      <section class="pad-y-xxl pad-x-l bg-navy white">
+        <div class="text-center">
+          <h1 class="caps bold"> On to </h1>
+          <h1 class="number">2016</h1>
+        </div>
+        <div class="grid cf">
+            <div class="col col-12 m-col-3">
+              <h2>Get Involved</h2>
+            </div>
+            <div class="col col-12 m-col-3">
+              <ul class="list-reset">
+                <li> <a class="red" href="http://bikeandbuild.org/apply"> Apply </a> </li>
+                <li> <a class="red" href="mailto:info@abikeandbuild.org"> Contact Us</a> </li>
+                <li> <a class="red" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan </a> </li>
+              </ul>
+            </div>
+            <div class="col col-12 m-col-3">
+              <p> Interested in partnering with Bike & Build? Check out our <a class="red" href="http://bikeandbuild.org">website</a> to learn more. </p>
+              <p> A special thanks to our 2015 partners, for all of their support of our riders and build partners. We couldn’t have done it without you!</p>
+            </div>
+            <div class="col col-12 m-col-3">
+              <img src="img/content/partners/partners_blue.jpg" alt="">
 
-  <div class="wrapper">
+            </div>
+        </div>
 
-    <h2 class="footer-heading">B&B 2015</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>B&B 2015</li>
-          <li><a href="mailto:info@bikeandbuild.org">info@bikeandbuild.org</a></li>
-        </ul>
-      </div>
+        <div class="grid cf">
+          <div class="col m-col-3">
+            <h2>Connect</h2>
+          </div>
+          <div class="col m-col-3">
+            <ul class="list-reset">
+              <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
+              <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
+              <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
+              <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+</div>
 
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          
+<footer class="site-footer">
 
-          
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">Bike And Build 2015 Annual Report
-</p>
-      </div>
-    </div>
-
-  </div>
 
 </footer>
+
+<script>
+// Open & Close Additional Content Sections
+  var panes = document.getElementsByClassName('pane');
+  var i;
+  for (i = 0; i < panes.length; i++) {
+      panes[i].classList.add("closed");
+  }
+  var panelinks = document.getElementsByClassName('paneLink');
+  var j;
+  for (j = 0; j < panelinks.length; j++){
+      var paneID = panelinks[j].getAttribute("href");
+      panelinks[j].addEventListener("click", function(event){
+        event.preventDefault();
+    });
+  }
+  function openMessage(){
+    document.getElementById("Message").classList.toggle("closed");
+  }
+  function openWhatIsBB(){
+    document.getElementById("WhatIsBB").classList.toggle("closed");
+  }
+  function openScholarships(){
+    document.getElementById("Scholarships").classList.toggle("closed");
+  }
+  function openDriftExpansion(){
+    document.getElementById("DriftExpansion").classList.toggle("closed");
+  }
+  function openYouthBuild(){
+    document.getElementById("YouthBuild").classList.toggle("closed");
+  }
+  function openGrantingImpact(){
+    document.getElementById("GrantingImpact").classList.toggle("closed");
+  }
+</script>
 
 
   </body>
