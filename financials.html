@@ -87,57 +87,58 @@ permalink: /financials/
 
             Plotly.newPlot('ahGrants', data, layout, {displayModeBar: false});
           </script>
-          <script>
 
-          (function() {
-            var d3 = Plotly.d3;
-
-            var WIDTH_IN_PERCENT_OF_PARENT = 100,
-            HEIGHT_IN_PERCENT_OF_PARENT = 100;
-
-            var gd3 = d3.select('Expenses')
-            .append('div')
-            .style({
-                width: WIDTH_IN_PERCENT_OF_PARENT + '%',
-                'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
-
-                height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
-                'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
-            });
-
-            var gd = gd3.node();
-
-
-
-            Plotly.plot(gd, [{
-            type: 'bar',
-            x: [1, 2, 3, 4],
-            y: [5, 10, 2, 8],
-            marker: {
-                color: '#C8A2C8',
-                line: {
-                    width: 2.5
-                }
-            }
-            }], {
-            title: 'Auto-Resize',
-            font: {
-                size: 16
-            }
-            });
-
-            window.onresize = function() {
-            Plotly.Plots.resize(gd);
-            };
-
-            })();
-          </script>
-          <figcaption>
-
-          </figcaption>
         </figure>
       </section>
       <section id="Expenses" class="pad-y-xxl pad-x-l">
+        <!-- Graph of Data -->
+        <figure class="float-center col-12 m-col-8">
+          <div id="expensesGraph"> </div>
+
+        </figure>
+        <script>
+          // Some info about viewport percentages:
+            // http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window
+
+            (function() {
+            var d3 = Plotly.d3;
+
+            var WIDTH_IN_PERCENT_OF_PARENT = 100,
+              HEIGHT_IN_PERCENT_OF_PARENT = 100;
+
+            var gd3 = d3.select('#expensesGraph')
+              .style({
+                  width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+                  'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
+
+                  height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
+                  'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+              });
+
+            var gd = gd3.node();
+
+            Plotly.plot(gd, [{
+              values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+              labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+              type: 'pie',
+              marker: {
+                colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+              }
+            }], {
+              title: 'Expenses Auto resize',
+              font: {
+                  size: 16
+              },
+            });
+
+            window.onresize = function() {
+              Plotly.Plots.resize(gd);
+            };
+
+            })();
+        </script>
+
+        <!-- Table of Data -->
         <figure class="">
             <table class="float-center col-12 m-col-8 pad-b-l">
               <thead>
@@ -166,7 +167,48 @@ permalink: /financials/
       <section class="pad-y-xxl pad-x-l">
         <h2></h2>
         <figure>
-          <div class="chart">
+          <div id="yearlyGrants"></div>
+          <script>
+          (function() {
+          var d3 = Plotly.d3;
+
+          var WIDTH_IN_PERCENT_OF_PARENT = 100,
+            HEIGHT_IN_PERCENT_OF_PARENT = 100;
+
+          var gd3 = d3.select('#yearlyGrants')
+            .style({
+                width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+                'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
+
+                height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
+                'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+            });
+
+          var gd = gd3.node();
+
+          Plotly.plot(gd, [{
+            //values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+            //labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+            type: 'scatter',
+            x: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            y: [ '$394,998', '$494,609', '$740,044', '$563,569', '$608,023', '$648,857', '$468,640', '$613,264','$637,311'],
+            //marker: {
+            //  colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+            //}
+          }], {
+            title: 'Expenses Auto resize',
+            font: {
+                size: 16
+            },
+          });
+
+          window.onresize = function() {
+            Plotly.Plots.resize(gd);
+          };
+
+          })();
+          </script>
+
 
             <table class="float-center col-12 m-col-8">
               <thead>
@@ -184,7 +226,7 @@ permalink: /financials/
                 <tr> <td class="col-6">2015</td> <td class="col-6">$637,311</td> </tr>
               </tbody>
             </table>
-          </div>
+
           <figcaption>
 
           </figcaption>
