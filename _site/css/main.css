@@ -874,29 +874,73 @@ dl, dd, ol, ul, figure {
   margin-right: auto; }
 
 /* Basscss Border */
-:root {
-  border-width: 1px;
-  border-radius: 3px; }
-
 .border {
   border-style: solid;
-  border-width: var(--border-width); }
+  border-width: 2px; }
 
 .border-top {
   border-top-style: solid;
-  border-top-width: var(--border-width); }
+  border-top-width: 2px; }
 
 .border-right {
   border-right-style: solid;
-  border-right-width: var(--border-width); }
+  border-right-width: 2px; }
 
 .border-bottom {
   border-bottom-style: solid;
-  border-bottom-width: var(--border-width); }
+  border-bottom-width: 2px; }
 
 .border-left {
   border-left-style: solid;
-  border-left-width: var(--border-width); }
+  border-left-width: 2px; }
+
+.border-thin {
+  border-style: solid;
+  border-width: 1px; }
+
+.border-top-thin {
+  border-top-style: solid;
+  border-top-width: 1px; }
+
+.border-right-thin {
+  border-right-style: solid;
+  border-right-width: 1px; }
+
+.border-bottom-thin {
+  border-bottom-style: solid;
+  border-bottom-width: 1px; }
+
+.border-left-thin {
+  border-left-style: solid;
+  border-left-width: 1px; }
+
+.border-thick {
+  border-style: solid;
+  border-width: 1rem; }
+
+.border-top-thick {
+  border-top-style: solid;
+  border-top-width: 1rem; }
+
+.border-right-thick {
+  border-right-style: solid;
+  border-right-width: 1rem; }
+
+.border-bottom-thick {
+  border-bottom-style: solid;
+  border-bottom-width: 1rem; }
+
+.border-left-thick {
+  border-left-style: solid;
+  border-left-width: 1rem; }
+
+.border-dotted {
+  border-style: dotted;
+  border-width: 1px; }
+
+.border-dotted {
+  border-style: dotted;
+  border-width: 1px; }
 
 .border-none {
   border: 0; }
@@ -1223,6 +1267,24 @@ dl, dd, ol, ul, figure {
 .ratio-1-1 {
   padding-top: 100%; }
 
+.column-count-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2; }
+
+.column-count-3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3; }
+
+.condensed {
+  font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: normal; }
+
+.tall {
+  font-size: 2em; }
+
+.uppercase {
+  text-transform: uppercase; }
+
 /* Basscss Type Scale */
 h1, .h1 {
   font-size: 2rem; }
@@ -1452,7 +1514,9 @@ button {
 a {
   transition: all .3s;
   text-decoration: none;
-  font-weight: 600; }
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-bottom-width: 2px; }
 
 .link {
   text-decoration: none; }
@@ -1463,9 +1527,9 @@ a:active {
 a.button {
   transition: background-color .3s;
   text-decoration: none;
-  color: black;
   padding: 0.5rem 1rem;
-  box-shadow: 0 0 0 2px black;
+  border-style: solid;
+  border-width: 2px;
   padding: 0.5rem 1rem; }
   a.button:hover {
     background-color: rgba(0, 0, 0, 0.1); }
@@ -1477,7 +1541,8 @@ a.button-white {
   text-decoration: none;
   color: white;
   padding: 0.5rem 1rem;
-  box-shadow: 0 0 0 2px white;
+  border-style: solid;
+  border-width: 2px;
   padding: 0.5rem 1rem; }
   a.button-white:hover {
     background-color: rgba(0, 0, 0, 0.1); }
@@ -1615,6 +1680,13 @@ body {
   @media screen and (min-width: 96em) {
     .number {
       font-size: 16rem; } }
+
+.medium-number {
+  font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 4rem;
+  line-height: .875;
+  margin-bottom: 0;
+  margin-left: -.035em; }
 
 .unit {
   color: #ff0000;

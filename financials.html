@@ -1,0 +1,235 @@
+---
+layout: default
+title: Financials
+permalink: /financials/
+---
+
+<div id="Financials" class="pad-t-xxl relative z3">
+
+      <section class="pad-y-xxl pad-x-l">
+        <header class="text-center">
+          <h1 class="number">2015</h1>
+          <h1 class="caps bold">Statement of Financials</h1>
+        </header>
+      </section>
+
+      <section id="Statement" class="pad-y-xxl pad-x-l">
+        <div class="text-center">
+          <h2> 2015 | 2014 </h2>
+        </div>
+        <table class="float-center col-12 m-col-8">
+          <thead>
+            <tr> <th> <h3>Statement of Activities </h3></th> <th> 2015 </th> <th> 2014 </th></tr>
+          </thead>
+          <tbody>
+
+            <tr><th>Unrestricted Net Assets</th> </tr>
+            <tr><td class="col-6"> Donations Income				          </td> <td class="col-3">1,488,248	</td> <td class="col-3">1,422,075 </td> </tr>
+            <tr><td class="col-6"> Application Fees				          </td> <td class="col-3">65,855	  </td> <td class="col-3">63,630</td> </tr>
+            <tr><td class="col-6"> Apparel Sales				            </td> <td class="col-3">37,575	  </td> <td class="col-3">31,683</td> </tr>
+            <tr><td class="col-6"> In-Kind Contributions		        </td> <td class="col-3">41,030	  </td> <td class="col-3">8,073</td> </tr>
+            <tr><td class="col-6"> Other Income				              </td> <td class="col-3">11,609	  </td> <td class="col-3">5,198</td> </tr>
+            <tr><td class="col-6"> Total Income				              </td> <td class="col-3">1,644,317	</td> <td class="col-3">1,530,659</td> </tr>
+            <tr><td class="col-6"> Assets Released from Restriction	</td> <td class="col-3">22,844	  </td> <td class="col-3"> 35,097</td> </tr>
+            <tr><td class="col-6"> Total Support and Revnue				  </td> <td class="col-3">1,667,161	</td> <td class="col-3"> 1,565,756</td> </tr>
+
+            <tr> <th class="pad-t-m">Expenses</th> </tr>
+            <tr><td class="col-6"> Program Services				              </td><td class="col-3">1,263,899	  </td><td class="col-3">1,322,250</td> </tr>
+            <tr><td class="col-6"> Management and General				        </td><td class="col-3">271,444	    </td><td class="col-3">214,306</td> </tr>
+            <tr><td class="col-6"> Fundraising				                  </td><td class="col-3">  36,518	    </td><td class="col-3">43,008</td> </tr>
+            <tr><td class="col-6"> Total Expenses				                </td><td class="col-3">1,571,861	  </td><td class="col-3">1,579,564</td> </tr>
+            <tr><td class="col-6"> Change in Unrestricted Net Assets		</td><td class="col-3">95,300	      </td><td class="col-3">-13,808</td> </tr>
+            <tr><td class="col-6">Total Other Income					          </td><td class="col-3">0	          </td><td class="col-3">5,198 </td> </tr>
+            <tr><td class="col-6">Change, Total Net Assets					    </td><td class="col-3">127,388	    </td><td class="col-3">-84 </td> </tr>
+            <tr><td class="col-6">Net Assets, Beginning					        </td><td class="col-3">208,147	    </td><td class="col-3">208,231</td></tr>
+            <tr><td class="col-6">Net Assets, Ending					          </td><td class="col-3">335,535	    </td><td class="col-3">208,147</td></tr>
+
+          </tbody>
+        </table>
+
+
+
+
+
+      </section>
+      <section id="Grants" class="pad-y-xxl pad-x-l">
+        <figure>
+          <div id="ahGrants" class="float-center col-12 m-col-8"> </div>
+          <!-- Table for grant data -->
+          <table class="float-center col-12 m-col-8">
+            <thead>
+              <th><h2>Affordable Housing Grants</h2></th>
+            </thead>
+            <tbody>
+              <tr> <td class="col-8">Competitive Grant Program			            </td><td class="col-4 align-top">$ 369,480 </td></tr>
+              <tr> <td class="col-8">Pre-Arranged Partner Contributions			    </td><td class="col-4 align-top">$ 100,251 </td></tr>
+              <tr> <td class="col-8">Rider $500 Donations			                  </td><td class="col-4 align-top">$ 99,750 </td></tr>
+              <tr> <td class="col-8">On the Road Gifts			                    </td><td class="col-4 align-top">$ 38,100 </td></tr>
+              <tr> <td class="col-8">Alumni Council Emergency Grants			      </td><td class="col-4 align-top">$ 10,000 </td></tr>
+              <tr> <td class="col-8">CWM Contributions			                    </td><td class="col-4 align-top">$ 19,730 </td></tr>
+              <tr> <td class="col-8"><strong>Total Bike & Build Grants</strong>	</td><td class="col-4 align-top"><strong>$ 637,311</strong></td></tr>
+            </tbody>
+          </table>
+          <script>
+            var data = [{
+              values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+              labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+              type: 'pie',
+              marker: {
+                colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+              }
+            }];
+
+            var layout = {
+              height: 400,
+              width: 600
+            };
+
+            Plotly.newPlot('ahGrants', data, layout, {displayModeBar: false});
+          </script>
+
+        </figure>
+      </section>
+      <section id="Expenses" class="pad-y-xxl pad-x-l">
+        <!-- Graph of Data -->
+        <figure class="float-center col-12 m-col-8">
+          <div id="expensesGraph"> </div>
+
+        </figure>
+        <script>
+          // Some info about viewport percentages:
+            // http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window
+
+            (function() {
+            var d3 = Plotly.d3;
+
+            var WIDTH_IN_PERCENT_OF_PARENT = 100,
+              HEIGHT_IN_PERCENT_OF_PARENT = 100;
+
+            var gd3 = d3.select('#expensesGraph')
+              .style({
+                  width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+                  'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
+
+                  height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
+                  'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+              });
+
+            var gd = gd3.node();
+
+            Plotly.plot(gd, [{
+              values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+              labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+              type: 'pie',
+              marker: {
+                colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+              }
+            }], {
+              title: 'Expenses Auto resize',
+              font: {
+                  size: 16
+              },
+            });
+
+            window.onresize = function() {
+              Plotly.Plots.resize(gd);
+            };
+
+            })();
+        </script>
+
+        <!-- Table of Data -->
+        <figure class="">
+            <table class="float-center col-12 m-col-8 pad-b-l">
+              <thead>
+                <th><h3>Program Expenses</h3></th>
+              </thead>
+              <tbody>
+                <tr> <td class="col-8"> Contributions			                </td><td class="col-4 align-top"> $637,311</td></tr>
+                <tr> <td class="col-8"> Trip Gear, Activities			        </td><td class="col-4 align-top"> $311,657</td></tr>
+                <tr> <td class="col-8"> Salaries, Benefits, Stipends			</td><td class="col-4 align-top"> $163,602</td></tr>
+                <tr> <td class="col-8"> Auto			                        </td><td class="col-4 align-top"> $64,149</td></tr>
+                <tr> <td class="col-8"> Insurance			                    </td><td class="col-4 align-top"> $16,225</td></tr>
+                <tr> <td class="col-8"> Technology			                  </td><td class="col-4 align-top"> $14,383</td></tr>
+                <tr> <td class="col-8"> Director Travel			              </td><td class="col-4 align-top"> $5,976</td></tr>
+                <tr> <td class="col-8"> Depreciation			                </td><td class="col-4 align-top"> $47,015</td></tr>
+                <tr> <td class="col-8"> Other			                        </td><td class="col-4 align-top"> $3,581</td></tr>
+                <tr> <td class="col-8"> <strong>Total Expenses</strong>		</td><td class="col-4 align-top"> <strong>$1,263,899</strong></td></tr>
+              </tbody>
+            </table>
+          <figcaption class="float-center m-col-4">
+              <blockquote cite="">
+                80.4% of money raised goes directly to support Bike & Build's mission.
+              </blockquote>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="pad-y-xxl pad-x-l">
+        <h2></h2>
+        <figure>
+          <div id="yearlyGrants"></div>
+          <script>
+          (function() {
+          var d3 = Plotly.d3;
+
+          var WIDTH_IN_PERCENT_OF_PARENT = 100,
+            HEIGHT_IN_PERCENT_OF_PARENT = 100;
+
+          var gd3 = d3.select('#yearlyGrants')
+            .style({
+                width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+                'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
+
+                height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
+                'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+            });
+
+          var gd = gd3.node();
+
+          Plotly.plot(gd, [{
+            //values:   [ 369480, 100251, 99750, 38100, 10000, 19730 ],
+            //labels: ['Competitive Grant Program','Pre-Arranged Partner Contributions','Rider $500 Donations','On the Road Gifts','Alumni Council Emergency Grants','CWM Contributions'],
+            type: 'scatter',
+            x: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            y: [ '$394,998', '$494,609', '$740,044', '$563,569', '$608,023', '$648,857', '$468,640', '$613,264','$637,311'],
+            //marker: {
+            //  colors:['#132756', '#1D2E65;', '#67b2e7', '#FFFFFF', '#031D40', '#ff0000'],
+            //}
+          }], {
+            title: 'Expenses Auto resize',
+            font: {
+                size: 16
+            },
+          });
+
+          window.onresize = function() {
+            Plotly.Plots.resize(gd);
+          };
+
+          })();
+          </script>
+
+
+            <table class="float-center col-12 m-col-8">
+              <thead>
+                <th><h3> Yearly Affordable Housing Grants </h3></th>
+              </thead>
+              <tbody>
+                <tr> <td class="col-6">2007</td> <td class="col-6">$394,998</td> </tr>
+                <tr> <td class="col-6">2008</td> <td class="col-6">$494,609</td> </tr>
+                <tr> <td class="col-6">2009</td> <td class="col-6">$740,044</td> </tr>
+                <tr> <td class="col-6">2010</td> <td class="col-6">$563,569</td> </tr>
+                <tr> <td class="col-6">2011</td> <td class="col-6">$608,023</td> </tr>
+                <tr> <td class="col-6">2012</td> <td class="col-6">$648,857</td> </tr>
+                <tr> <td class="col-6">2013</td> <td class="col-6">$468,640</td> </tr>
+                <tr> <td class="col-6">2014</td> <td class="col-6">$613,264</td> </tr>
+                <tr> <td class="col-6">2015</td> <td class="col-6">$637,311</td> </tr>
+              </tbody>
+            </table>
+
+          <figcaption>
+
+          </figcaption>
+        </figure>
+      </section>
+</div>
