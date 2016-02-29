@@ -263,43 +263,75 @@ title: 2015 Review
               </div>
             </div>
           </figcaption>
-          <div class="relative">
-            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#P2S"></use> </svg> </div>
-            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#C2C"></use> </svg> </div>
-              <script>
-              //var routePaths = document.getElementsByClassName('routePath');
-              //var i;
-              //for (i = 0; i < routePaths.length; i++) {
-              //
-              //}
 
-                  var path = document.querySelector('#C2C path');
-                  var length = path.getTotalLength();
-                  // Clear any previous transition
-                  path.style.transition = path.style.WebkitTransition = 'none';
-                  // Set up the starting positions
-                  path.style.strokeDasharray = length + ' ' + length;
-                  path.style.strokeDashoffset = length;
-                  // Trigger a layout so styles are calculated & the browser
-                  // picks up the starting position before animating
-                  path.getBoundingClientRect();
-                  // Define our transition
-                  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s linear';
-
-              //var path = document.querySelector('#P2S path');
-              //var length = path.getTotalLength();
-
-              // Go!
-                  path.style.strokeDashoffset = '0';
-              </script>
-
-            <div class="relative z1">
-              <svg class="map"> <use xlink:href="#MAP"></use> </svg>
-              <!-- <img class="float-center" src="img/content/map/usaLow.svg" alt=""> -->
-
-            </div>
-          </div>
         </figure>
+        <div class="relative mapContainer float-center">
+          <!-- Triggers / Labels for Route Path Animation -->
+          <button class="absolute z4 top-0 left-0  pointer-right trigger" id="labelNUS"  onclick="getElementById('pNUS').classList.add('pathAnim');"> NUS </button>
+          <button class="absolute z4 top-0 right-0 pointer-left  trigger" id="labelME2SB"> ME2SB </button>
+          <button class="absolute z4 top-s right-0 pointer-left  trigger" id="labelP2S"  > P2S </button>
+          <button class="absolute z4 top-s left-0  pointer-right trigger" id="labelCUS"  > CUS </button>
+          <button class="absolute z4 top-m left-0  pointer-right trigger" id="labelC2C"  > C2C </button>
+          <button class="absolute z4 top-l left-0  pointer-right trigger" id="labelNC2SD"> NC2SD </button>
+          <button class="absolute z4 top-m right-0 pointer-left  trigger" id="labelSC2SC"> SC2SC </button>
+          <button class="absolute z4 top-l right-0 pointer-left  trigger" id="labelSUS"  > SUS </button>
+          <!-- Route Paths as SVGs -->
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2">
+            <svg id="pNUS" class="map routePath wow strokeInLeft" viewBox="0 0 1200 800" enable-background="new 0 0 1200 800">
+              <!-- <use xlink:href="#NUS"></use>  -->
+              <path class="path" fill="none" stroke="#132756" stroke-width="1" stroke-miterlimit="10" d="M1021.8,162.566c0,0-8.705-0.799-13.231-3.264
+            		c-4.528-2.467-11.094-12.688-21.142-11.12c-10.05,1.567-19.461,6.839-27.341,12.219c-7.879,5.381-26.562,16.071-38.966,16.885
+            		c-12.406,0.814-30.88-5.834-29.553,0.673c1.326,6.506,4.037,12.368,2.376,15.77c-1.66,3.402-35.053,41.603-51.697,42.795
+            		c-16.645,1.189-33.479-15.091-43.146-13.473c-9.667,1.615-37.405,23.128-45.875,20.689c-8.471-2.439-14.058-14.025-20.99-17.56
+            		c-6.932-3.533-8.41-16.502-14.129-17.854c-5.72-1.354-59.476-23.461-64.078-35.617c-4.602-12.159,0.059-22.759,1.053-30.029
+            		c0.994-7.271,8.677-21.171,12.728-23.856c4.049-2.688-38.615-14.729-56.845-16.907c-18.229-2.177-17.899-0.041-25.915-1.962
+            		c-8.015-1.921-30.431-9.625-36.587-9.457c-6.156,0.169-14.822,6.017-22.063,4.225c-7.24-1.792-13.571-7.813-21.33-5.762
+            		c-7.759,2.049-9.696,6.321-18.247,5.143c-8.551-1.18-32.604-2.262-48.55-8.028c-15.945-5.769-35.972-15.7-45.944-16.432
+            		c-9.971-0.732-36.594,1.792-41.859-1.468s-10.982-15.765-16.012-14.789c-5.032,0.979-7.597,8.196-17.248,9.395
+            		c-9.652,1.196-39.835-4.092-43.965-6.925c-4.133-2.835-10.76-13.124-17.95-15.048c-7.191-1.925-25.34,1.688-38.123-9.478
+            		c-12.782-11.168-10.697-12.034-13.092-20.576"/>
+          </svg>
+        </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pME2" class="map routePath wow strokeInLeft"> <use xlink:href="#ME2SB"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pP2S" class="map routePath wow strokeInLeft"> <use xlink:href="#P2S"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pCUS" class="map routePath wow strokeInLeft"> <use xlink:href="#CUS"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pC2C" class="map routePath wow strokeInLeft"> <use xlink:href="#C2C"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pNC2" class="map routePath wow strokeInLeft"> <use xlink:href="#NC2SD"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pSC2" class="map routePath wow strokeInLeft"> <use xlink:href="#SC2SC"></use> </svg> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg id="pSUS" class="map routePath wow strokeInLeft"> <use xlink:href="#SUS"></use> </svg> </div>
+            <script>
+            //var routePaths = document.getElementsByClassName('routePath');
+            //var i;
+            //for (i = 0; i < routePaths.length; i++) {
+            //
+            //}
+
+                //var path = document.querySelector('#C2C path');
+                //var length = path.getTotalLength();
+                //// Clear any previous transition
+                //path.style.transition = path.style.WebkitTransition = 'none';
+                //// Set up the starting positions
+                //path.style.strokeDasharray = length + ' ' + length;
+                //path.style.strokeDashoffset = length;
+                //// Trigger a layout so styles are calculated & the browser
+                //// picks up the starting position before animating
+                //path.getBoundingClientRect();
+                //// Define our transition
+                //path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s linear';
+//
+            //var path = document.querySelector('#P2S path');
+            //var length = path.getTotalLength();
+
+            // Go!
+              //  path.style.strokeDashoffset = '0';
+            </script>
+
+          <div class="absolute z1 top-0 left-0 right-0 bottom-0">
+            <svg class="map"> <use xlink:href="#MAP"></use> </svg>
+            <!-- <img class="float-center" src="img/content/map/usaLow.svg" alt=""> -->
+
+          </div>
+        </div>
 
 
       </section>

@@ -29,20 +29,32 @@ body{
   color:$navy;
   //border-left:2rem solid $red;
 }
-#Story{
-  //border-left:2px solid $navy;
-}
 
 
+// Fundraising Bar Animations
 #bar-a {max-height:41% ; height:41% ;}
 #bar-b {max-height:50% ; height:50% ;}
 #bar-c {max-height:51% ; height:51% ;}
 #bar-d {max-height:53% ; height:53% ;}
 #bar-e {max-height:100%; height:100%; }
 
+
+// MAP Animations
+.mapContainer{
+  width:(em(300));
+  height:(em(200));
+  @include breakpoint(m) {
+    width:(em(600));
+    height:(em(400));
+  }
+  @include breakpoint(l) {
+    width:(em(900));
+    height:(em(600));
+  }
+}
 .map{
   width:100%;
-  height:80vh;
+  height:100%;
   max-width:100%;
   display: inline-block;
 	fill: currentColor;
@@ -56,25 +68,129 @@ body{
     }
   }
 }
-.routePath{
-  &:hover{
-    stroke-width: 20px;
-    path{
-      stroke-width: 20px;
-    }
-  }
-  &.active{
-    path{
-      animation: dash 2s ease-in-out forwards;
-    }
+
+// Triggers for Route Path Animation
+
+#labelNUS  {
+  @include breakpoint(m) {
+    top:2%; left:9%;
+  };
+  @include breakpoint(l) {
+    left:11%;
   }
 }
+#labelME2SB{
+  @include breakpoint(m) {
+    top:19%; right:3.5%;
+  };
+  @include breakpoint(l) {
+    right:7%;
+  }
+}
+#labelP2S  {
+  @include breakpoint(m) {
+    top:24%; right:6%;
+  };
+  @include breakpoint(l) {
+    right:9%;
+  }
+}
+#labelCUS  {
+  @include breakpoint(m) {
+    top:14%; left:6%;
+  };
+  @include breakpoint(l) {
+    left:8.5%;
+  }
+}
+#labelC2C  {
+  @include breakpoint(m) {
+    top:33%; left:3%;
+  };
+  @include breakpoint(l) {
+    left:6%;
+  }
+}
+#labelNC2SD{
+  @include breakpoint(m) {
+    top:50.5%; left:6%;
+  };
+  @include breakpoint(l) {
+    left:9%;
+  }
+}
+#labelSC2SC{
+  @include breakpoint(m) {
+    top:52%; right:12%;
+  };
+  @include breakpoint(l) {
+    right:15.5%;
+  }
+}
+#labelSUS  {
+  @include breakpoint(m) {
+    top:62%; right:18%;
+  };
+  @include breakpoint(l) {
+    right:20%;
+  }
+}
+
+.trigger{
+  display:none;
+  @include breakpoint(m) {
+    display:block;
+  };
+  font-size:$h6;
+  background-color:$navy;
+  color:$white;
+  padding:.25em .5em;
+  letter-spacing: 0.1em;
+  &:before, &:after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    top:.5em;
+  }
+}
+.pointer-left{
+  &:before{
+    left: -.75em;
+    border-right:.75em solid $navy;
+    border-top:.5em solid transparent;
+    border-bottom:.5em solid transparent;
+  }
+}
+.pointer-right{
+  &:after{
+    right: -.75em;
+    border-left:.75em solid $navy;
+    border-top:.5em solid transparent;
+    border-bottom:.5em solid transparent;
+  }
+}
+
+.pathAnim{
+
+}
+.path{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-width:4;
+  animation: dash 2s ease-in-out forwards infinite;
+}
 @-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
   to {
     stroke-dashoffset: 0;
   }
 }
 @keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
   to {
     stroke-dashoffset: 0;
   }
@@ -129,13 +245,8 @@ body{
   margin-bottom:0;
 }
 blockquote{
-  //background-color:$red;
-  //color:$white;
   font-size:1.25rem;
   line-height:1.5rem;
-  //padding:1.5rem 0;
-  //padding:4rem;
-  //font-weight:600;
   position:relative;
   margin-left:3rem;
   &:before{
@@ -163,17 +274,7 @@ section{
   position:relative;
   //overflow-x:hidden;
 }
-#WhatIsBB{
-  //color:$white;
-  //background-color:$navy;
-}
 
-.average-line{
-  @include breakpoint(l) {
-    width:100%;
-    border-top: 1px dotted $navy;
-  };
-}
 .fundraiser-name{
   transform:rotate(90deg);
   transform-origin: 6% 75%;
@@ -181,8 +282,4 @@ section{
     transform:rotate(45deg);
     transform-origin: 20% 200%;
   };
-}
-
-#Financials {
-  border-top: 2px $red solid;
 }

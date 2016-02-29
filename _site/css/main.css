@@ -3425,9 +3425,21 @@ body {
   max-height: 100%;
   height: 100%; }
 
+.mapContainer {
+  width: 18.75em;
+  height: 12.5em; }
+  @media screen and (min-width: 48em) {
+    .mapContainer {
+      width: 37.5em;
+      height: 25em; } }
+  @media screen and (min-width: 64em) {
+    .mapContainer {
+      width: 56.25em;
+      height: 37.5em; } }
+
 .map {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   max-width: 100%;
   display: inline-block;
   fill: currentColor;
@@ -3437,17 +3449,112 @@ body {
 #C2C:hover path {
   stroke-width: 20px; }
 
-.routePath:hover {
-  stroke-width: 20px; }
-  .routePath:hover path {
-    stroke-width: 20px; }
-.routePath.active path {
-  animation: dash 2s ease-in-out forwards; }
+@media screen and (min-width: 48em) {
+  #labelNUS {
+    top: 2%;
+    left: 9%; } }
+@media screen and (min-width: 64em) {
+  #labelNUS {
+    left: 11%; } }
+
+@media screen and (min-width: 48em) {
+  #labelME2SB {
+    top: 19%;
+    right: 3.5%; } }
+@media screen and (min-width: 64em) {
+  #labelME2SB {
+    right: 7%; } }
+
+@media screen and (min-width: 48em) {
+  #labelP2S {
+    top: 24%;
+    right: 6%; } }
+@media screen and (min-width: 64em) {
+  #labelP2S {
+    right: 9%; } }
+
+@media screen and (min-width: 48em) {
+  #labelCUS {
+    top: 14%;
+    left: 6%; } }
+@media screen and (min-width: 64em) {
+  #labelCUS {
+    left: 8.5%; } }
+
+@media screen and (min-width: 48em) {
+  #labelC2C {
+    top: 33%;
+    left: 3%; } }
+@media screen and (min-width: 64em) {
+  #labelC2C {
+    left: 6%; } }
+
+@media screen and (min-width: 48em) {
+  #labelNC2SD {
+    top: 50.5%;
+    left: 6%; } }
+@media screen and (min-width: 64em) {
+  #labelNC2SD {
+    left: 9%; } }
+
+@media screen and (min-width: 48em) {
+  #labelSC2SC {
+    top: 52%;
+    right: 12%; } }
+@media screen and (min-width: 64em) {
+  #labelSC2SC {
+    right: 15.5%; } }
+
+@media screen and (min-width: 48em) {
+  #labelSUS {
+    top: 62%;
+    right: 18%; } }
+@media screen and (min-width: 64em) {
+  #labelSUS {
+    right: 20%; } }
+
+.trigger {
+  display: none;
+  font-size: 0.75rem;
+  background-color: #132756;
+  color: #FFF;
+  padding: .25em .5em;
+  letter-spacing: 0.1em; }
+  @media screen and (min-width: 48em) {
+    .trigger {
+      display: block; } }
+  .trigger:before, .trigger:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: .5em; }
+
+.pointer-left:before {
+  left: -.75em;
+  border-right: 0.75em solid #132756;
+  border-top: .5em solid transparent;
+  border-bottom: .5em solid transparent; }
+
+.pointer-right:after {
+  right: -.75em;
+  border-left: 0.75em solid #132756;
+  border-top: .5em solid transparent;
+  border-bottom: .5em solid transparent; }
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-width: 4;
+  animation: dash 2s ease-in-out forwards infinite; }
 
 @-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
   to {
     stroke-dashoffset: 0; } }
 @keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
   to {
     stroke-dashoffset: 0; } }
 .story {
@@ -3509,11 +3616,6 @@ blockquote {
 section {
   position: relative; }
 
-@media screen and (min-width: 64em) {
-  .average-line {
-    width: 100%;
-    border-top: 1px dotted #132756; } }
-
 .fundraiser-name {
   transform: rotate(90deg);
   transform-origin: 6% 75%; }
@@ -3521,6 +3623,3 @@ section {
     .fundraiser-name {
       transform: rotate(45deg);
       transform-origin: 20% 200%; } }
-
-#Financials {
-  border-top: 2px #ff0000 solid; }
