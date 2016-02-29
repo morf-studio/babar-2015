@@ -94,7 +94,7 @@
 			scaleBeginAtZero: false,
 
 			// String - Scale label font declaration for the scale label
-			scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			scaleFontFamily: "'canada-type-gibson', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 
 			// Number - Scale label font size in pixels
 			scaleFontSize: 12,
@@ -121,13 +121,13 @@
 			tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
 			// String - Tooltip background colour
-			tooltipFillColor: "rgba(0,0,0,0.8)",
+			tooltipFillColor: "#ff0000",
 
 			// String - Tooltip label font declaration for the scale label
-			tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipFontFamily: "'canada-type-gibson', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 
 			// Number - Tooltip label font size in pixels
-			tooltipFontSize: 14,
+			tooltipFontSize: 16,
 
 			// String - Tooltip font weight style
 			tooltipFontStyle: "normal",
@@ -136,10 +136,10 @@
 			tooltipFontColor: "#fff",
 
 			// String - Tooltip title font declaration for the scale label
-			tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipTitleFontFamily: "'canada-type-gibson', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 
 			// Number - Tooltip title font size in pixels
-			tooltipTitleFontSize: 14,
+			tooltipTitleFontSize: 16,
 
 			// String - Tooltip title font weight style
 			tooltipTitleFontStyle: "bold",
@@ -151,16 +151,16 @@
 			tooltipTitleTemplate: "<%= label%>",
 
 			// Number - pixel width of padding around tooltip text
-			tooltipYPadding: 6,
+			tooltipYPadding: 16,
 
 			// Number - pixel width of padding around tooltip text
-			tooltipXPadding: 6,
+			tooltipXPadding: 8,
 
 			// Number - Size of the caret on the tooltip
 			tooltipCaretSize: 8,
 
 			// Number - Pixel radius of the tooltip border
-			tooltipCornerRadius: 6,
+			tooltipCornerRadius: 4,
 
 			// Number - Pixel offset from point x to tooltip edge
 			tooltipXOffset: 10,

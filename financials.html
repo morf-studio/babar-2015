@@ -59,7 +59,55 @@ permalink: /financials/
       <section id="Grants" class="pad-y-xxl pad-x-l">
         <figure>
           <h2 class="h1">Affordable Housing Grants</h2>
-          <div id="ahGrants" class="float-center col-12 m-col-8"> </div>
+          <div id="grantsContainer" class="col-6">
+                <canvas id="grantsGraph" height="400" width="400"></canvas>
+          </div>
+          <script>
+          var grantsGraph = document.getElementById("grantsGraph").getContext("2d");
+          var data = [
+              {
+                value: 369480,
+                color:"#132756",
+                label: "Competitive Grant Program",
+              },
+              {
+                value: 100251,
+                color:"#67b2e7",
+                label: "Pre-Arranged Partner Contributions",
+              },
+              {
+                value:99750,
+                color:"#ff0000",
+                label: "Rider $500 Donations",
+              },
+              {
+                value: 38100 ,
+                color:"#1D2E65",
+                label: "On the Road Gifts" ,
+              },
+              {
+                value: 10000,
+                color:"#031D40",
+                label: "Alumni Council Emergency Grants" ,
+              },
+              {
+                value: 19730,
+                color:"#ff0000",
+                label: "CWM Contributions",
+              }
+          ]
+          var grantsChart = new Chart(grantsGraph).Doughnut(data, {
+             segmentShowStroke : true,
+             segmentStrokeColor : "#fff",
+             segmentStrokeWidth : 1,
+             //animateRotate : true,
+             //animateScale: true,
+             animationEasing: "easeInCubic",
+             responsive : true,
+             percentageInnerCutout : 33,
+          });
+          </script>
+
           <!-- Table for grant data -->
           <table class="float-center col-12 m-col-8">
             <thead>
@@ -154,7 +202,7 @@ permalink: /financials/
         var expensesChart = new Chart(expenses).Doughnut(data, {
            segmentShowStroke : true,
            segmentStrokeColor : "#fff",
-           segmentStrokeWidth : 2,
+           segmentStrokeWidth : 1,
            //animateRotate : true,
            //animateScale: true,
            animationEasing: "easeInCubic",
