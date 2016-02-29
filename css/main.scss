@@ -46,7 +46,25 @@ body{
   max-width:100%;
   display: inline-block;
 	fill: currentColor;
+  stroke: currentColor;
 	padding:1rem 0;
+}
+.routePath{
+  &.active{
+    path{
+      animation: dash 2s ease-in-out forwards;
+    }
+  }
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .story{
