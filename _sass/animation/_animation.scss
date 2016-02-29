@@ -764,6 +764,26 @@
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+@-webkit-keyframes {
+  from{
+    max-height:0;
+  }
+  to{
+    max-height:auto;
+  }
+}
+@keyframes heightInUp {
+  from{
+    max-height:0;
+  }
+  to{
+    max-height:auto;
+  }
+}
+.heightInUp{
+  -webkit-animation-name: heightInUp;
+  animation-name: heightInUp;
+}
 
 @-webkit-keyframes fadeInUpBig {
   from {
