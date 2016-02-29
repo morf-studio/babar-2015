@@ -1578,7 +1578,8 @@ figcaption {
   height: 100%; }
 
 th {
-  text-align: left; }
+  text-align: left;
+  font-weight: 600; }
 
 td {
   line-height: 1.5;

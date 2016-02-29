@@ -103,7 +103,7 @@
 			scaleFontStyle: "normal",
 
 			// String - Scale label font colour
-			scaleFontColor: "#666",
+			scaleFontColor: "#132756",
 
 			// Boolean - whether or not the chart should be responsive and resize when the browser does.
 			responsive: true,
@@ -166,10 +166,10 @@
 			tooltipXOffset: 10,
 
 			// String - Template string for single tooltips
-			tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+			tooltipTemplate: "<%if (label){%><%=label%>: <%}%>$<%= value %>",
 
 			// String - Template string for single tooltips
-			multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
+			multiTooltipTemplate: "<%= datasetLabel %>: $<%= value %>",
 
 			// String - Colour behind the legend colour block
 			multiTooltipKeyBackground: '#fff',
