@@ -1509,7 +1509,7 @@ button {
 
 @media screen and (min-width: 48em) {
   .story-icon {
-    font-size: 1.5rem; } }
+    font-size: 2rem; } }
 
 a {
   transition: all .3s;
