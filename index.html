@@ -264,10 +264,8 @@ title: 2015 Review
             </div>
           </figcaption>
           <div class="relative">
-            <div class="absolute top-0 left-0 right-0 bottom-0 z2">
-              <!-- <img src="img/content/map/p2s.svg" alt=""> -->
-              <svg class="map routePath"> <use xlink:href="#P2S"></use> </svg>
-              <svg class="map routePath"> <use xlink:href="#C2C"></use> </svg>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#P2S"></use> </svg> </div>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#C2C"></use> </svg> </div>
               <script>
               //var routePaths = document.getElementsByClassName('routePath');
               //var i;
@@ -286,7 +284,7 @@ title: 2015 Review
                   // picks up the starting position before animating
                   path.getBoundingClientRect();
                   // Define our transition
-                  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s ease-in-out';
+                  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s linear';
 
               //var path = document.querySelector('#P2S path');
               //var length = path.getTotalLength();
@@ -294,7 +292,7 @@ title: 2015 Review
               // Go!
                   path.style.strokeDashoffset = '0';
               </script>
-            </div>
+
             <div class="relative z1">
               <svg class="map"> <use xlink:href="#MAP"></use> </svg>
               <!-- <img class="float-center" src="img/content/map/usaLow.svg" alt=""> -->

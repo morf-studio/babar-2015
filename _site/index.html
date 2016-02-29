@@ -415,7 +415,7 @@
     		c-3.979-0.906-10.142-0.629-11.427-2.268c-1.286-1.638-10.743-10.621-18.934-13.214"/>
     </symbol>
     <symbol id="C2C" viewBox="0 0 1200 800">
-    	<path fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M1020.722,199.479c0,0-19.176-7.312-22.943-1.263
+    	<path fill="none" stroke="#FF0000" stroke-width="8" stroke-miterlimit="10" d="M1020.722,199.479c0,0-19.176-7.312-22.943-1.263
     		c-8.734,14.03-28.942,14.752-31.99,18.792c-2.708,3.589-5.079,13.516-17.409,19.379c-6.057,2.882-17.929,6.87-23.94,8.389
     		c-6.009,1.521-42.595,14.272-47.518,17.56c-4.923,3.287-19.319,13.55-31.857,14.84c-12.539,1.29-72.955-2.561-78.037-0.236
     		c-5.082,2.321-63.204,9.893-70.92,10.586c-7.715,0.69-43.932,8.456-48.279,11.764s-8.839,8.191-17.173,7.281
@@ -426,7 +426,7 @@
     		c-7.061,8.594-13.377,22.217-13.377,22.217"/>
     </symbol>
     <symbol id="P2S" viewBox="0 0 1200 800">
-    	<path fill="none" stroke="#000000" class="" stroke-width="4" stroke-miterlimit="10" d="M1023.742,186.198c0,0-23.545,2.146-34.043,6.643
+    	<path fill="none" stroke="#FF0000" class="" stroke-width="4" stroke-miterlimit="10" d="M1023.742,186.198c0,0-23.545,2.146-34.043,6.643
     		c-10.498,4.5-12.772,8.353-18.301,7.064c-5.528-1.289-27.686-11.333-39.301-9.058c-11.614,2.275-18.209,3.95-19.477,7.181
     		c-1.267,3.231,4.091,14.953-0.6,17.096c-4.689,2.142-23.243-0.031-27.5,3.273c-4.256,3.304-13.827,11.82-16.567,14.406
     		c-2.74,2.585-14.695,2.562-16.78,7.103c-2.083,4.541-12.307,18.447-17.593,22.817c-5.285,4.371-18.232,10.131-25.776,9.284
@@ -770,10 +770,8 @@
             </div>
           </figcaption>
           <div class="relative">
-            <div class="absolute top-0 left-0 right-0 bottom-0 z2">
-              <!-- <img src="img/content/map/p2s.svg" alt=""> -->
-              <svg class="map routePath"> <use xlink:href="#P2S"></use> </svg>
-              <svg class="map routePath"> <use xlink:href="#C2C"></use> </svg>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#P2S"></use> </svg> </div>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z2"> <svg class="map routePath"> <use xlink:href="#C2C"></use> </svg> </div>
               <script>
               //var routePaths = document.getElementsByClassName('routePath');
               //var i;
@@ -792,7 +790,7 @@
                   // picks up the starting position before animating
                   path.getBoundingClientRect();
                   // Define our transition
-                  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s ease-in-out';
+                  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s linear';
 
               //var path = document.querySelector('#P2S path');
               //var length = path.getTotalLength();
@@ -800,7 +798,7 @@
               // Go!
                   path.style.strokeDashoffset = '0';
               </script>
-            </div>
+
             <div class="relative z1">
               <svg class="map"> <use xlink:href="#MAP"></use> </svg>
               <!-- <img class="float-center" src="img/content/map/usaLow.svg" alt=""> -->

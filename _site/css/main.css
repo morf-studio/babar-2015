@@ -3434,6 +3434,13 @@ body {
   stroke: currentColor;
   padding: 1rem 0; }
 
+#C2C:hover path {
+  stroke-width: 20px; }
+
+.routePath:hover {
+  stroke-width: 20px; }
+  .routePath:hover path {
+    stroke-width: 20px; }
 .routePath.active path {
   animation: dash 2s ease-in-out forwards; }
 

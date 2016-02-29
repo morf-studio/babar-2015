@@ -49,7 +49,20 @@ body{
   stroke: currentColor;
 	padding:1rem 0;
 }
+#C2C{
+  &:hover{
+    path{
+      stroke-width: 20px;
+    }
+  }
+}
 .routePath{
+  &:hover{
+    stroke-width: 20px;
+    path{
+      stroke-width: 20px;
+    }
+  }
   &.active{
     path{
       animation: dash 2s ease-in-out forwards;
