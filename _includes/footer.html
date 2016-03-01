@@ -1,45 +1,51 @@
 <div id="Onward">
   <!-- On to 2016 -->
-      <section class="pad-y-xxl pad-x-l bg-navy white">
-        <div class="text-center">
-          <h1 class="caps bold"> On to </h1>
-          <h1 class="number">2016</h1>
+      <section class="pad-b-xl  relative z2">
+        <div class="pad-x-l text-center bg-navy white red-accent mar-b-xl">
+          <header class="pad-y-xxl">
+            <h1 class="caps bold"> On to </h1>
+            <h1 class="number"> <span class="white">2016</span> </h1>
+          </header>
         </div>
-        <div class="grid cf">
-            <div class="col col-12 m-col-3">
-              <h2>Get Involved</h2>
+        <div class="pad-x-l">
+          <div class="col-12 m-col-8 float-center">
+            <h2 class="h1">Get Involved</h2>
+          </div>
+          <div class="grid cf float-center col-12 m-col-8">
+            <div class="col col-12 l-col-6 pad-r-m">
+              <p class="h3"> Interested in partnering with Bike & Build? Check out our <a class="navy" href="http://bikeandbuild.org">website</a> to learn more. </p>
+              <p class="h3"> A special thanks to our 2015 partners, for all of their support of our riders and build partners. We couldn’t have done it without you!</p>
             </div>
-            <div class="col col-12 m-col-3">
-              <ul class="list-reset">
-                <li> <a class="red" href="http://bikeandbuild.org/apply"> Apply </a> </li>
-                <li> <a class="red" href="mailto:info@abikeandbuild.org"> Contact Us</a> </li>
-                <li> <a class="red" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan </a> </li>
-              </ul>
-            </div>
-            <div class="col col-12 m-col-3">
-              <p> Interested in partnering with Bike & Build? Check out our <a class="red" href="http://bikeandbuild.org">website</a> to learn more. </p>
-              <p> A special thanks to our 2015 partners, for all of their support of our riders and build partners. We couldn’t have done it without you!</p>
-            </div>
-            <div class="col col-12 m-col-3">
+            <div class="col col-12 l-col-6">
               <img src="img/content/partners/partners_blue.jpg" alt="">
-
             </div>
-        </div>
+          </div>
 
+          <div class="col-12 m-col-8 float-center pad-y-xl">
+            <h2 class="h1">Learn More</h2>
+            <p class="mar-t-l">
+               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Apply  &rarr;</a>
+               <a class="red button mar-r-m" href="mailto:info@abikeandbuild.org"> Contact Us &rarr;</a>
+               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan &rarr;</a>
+            </p>
+          </div>
 
-        <div class="grid cf">
-          <div class="col m-col-3">
+          <div class="col-12 m-col-8 float-center">
             <h2>Connect</h2>
           </div>
-          <div class="col m-col-3">
-            <ul class="list-reset">
-              <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
-              <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
-              <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
-              <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
-            </ul>
+          <div class="grid cf float-center col-12 m-col-8">
+
+            <div class="col">
+              <ul class="list-reset">
+                <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
+                <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
+                <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
+                <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
+              </ul>
+            </div>
           </div>
         </div>
+
       </section>
 </div>
 
@@ -48,7 +54,24 @@
 
 </footer>
 
+
+
 <script>
+new WOW().init();
+
+//wow = new WOW(
+//{
+//boxClass:     'wow',      // default
+//animateClass: 'animated', // default
+//offset:       0,          // default
+//mobile:       true,       // default
+//live:         true        // default
+//}
+//)
+//wow.init();
+
+
+
 // Open & Close Additional Content Sections
   var panes = document.getElementsByClassName('pane');
   var i;
@@ -63,22 +86,36 @@
         event.preventDefault();
     });
   }
-  function openMessage(){
-    document.getElementById("Message").classList.toggle("closed");
+  function openID(){
+    document.getElementById("ID").classList.toggle("closed");
   }
-  function openWhatIsBB(){
-    document.getElementById("WhatIsBB").classList.toggle("closed");
+
+
+
+  function removePaths() {
+    var routePaths = document.getElementsByClassName('routePath');
+    var l;
+    for (l = 0; l < routePaths.length; l++){
+      routePaths[l].classList.remove("pathAnim");
+    }
   }
-  function openScholarships(){
-    document.getElementById("Scholarships").classList.toggle("closed");
-  }
-  function openDriftExpansion(){
-    document.getElementById("DriftExpansion").classList.toggle("closed");
-  }
-  function openYouthBuild(){
-    document.getElementById("YouthBuild").classList.toggle("closed");
-  }
-  function openGrantingImpact(){
-    document.getElementById("GrantingImpact").classList.toggle("closed");
-  }
+
+  //function removeClass(classToRemove){
+  //  var elems = document.getElementsByClassName(classToRemove);
+  //console.log(elems.length);
+  //  if (!elems) return;
+  //  for (var i=elems.length-1;i>=0;i--) {
+  //    var elem=elems[i];
+  //    var classes=elem.className.split(" ");
+  //    var newClass = classes.splice(classes.indexOf(classToRemove),1).join(" ");
+  //    elem.className=classes;
+  //    console.log(i,classes,newClass)
+  //  }
+  //}
+  //window.onload=function() {
+  //document.getElementById("but").onclick=function() {
+  //  removeClass("dice");
+  //}
+
+
 </script>
