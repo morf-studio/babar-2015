@@ -3515,6 +3515,7 @@ body {
 
 .trigger {
   display: none;
+  outline: none;
   font-size: 0.75rem;
   background-color: #132756;
   color: #FFF;
@@ -3547,7 +3548,7 @@ body {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   stroke-width: 4;
-  animation: dash 2s ease-in-out forwards infinite; }
+  animation: dash 2s ease-in-out forwards 1; }
 
 @-webkit-keyframes dash {
   from {

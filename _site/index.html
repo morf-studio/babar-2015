@@ -993,7 +993,6 @@
 
           <div class="absolute z1 top-0 left-0 right-0 bottom-0">
             <svg class="map"> <use xlink:href="#MAP"></use> </svg>
-            <!-- <img class="float-center" src="img/content/map/usaLow.svg" alt=""> -->
 
           </div>
         </div>
@@ -1011,7 +1010,9 @@
             <article class="">
               <div class="col-8 float-center pad-b-l wow zoomInUp">
                 <div class="circle overflow-hidden">
-                  <img src="img/content/drift/driftwest_red_1_1.jpg" alt="">
+                  <img src="img/content/drift/driftwest_red_1_1.jpg"
+                  srcset="img/content/drift/driftwest_red" 
+                  alt="">
                 </div>
               </div>
               <h3 class="text-center"> Drift Expansion </h3>
@@ -1372,6 +1373,32 @@ new WOW().init();
     document.getElementById("ID").classList.toggle("closed");
   }
 
+
+
+  function removePaths() {
+    var routePaths = document.getElementsByClassName('routePath');
+    var l;
+    for (l = 0; l < routePaths.length; l++){
+      routePaths[l].classList.remove("pathAnim");
+    }
+  }
+
+  //function removeClass(classToRemove){
+  //  var elems = document.getElementsByClassName(classToRemove);
+  //console.log(elems.length);
+  //  if (!elems) return;
+  //  for (var i=elems.length-1;i>=0;i--) {
+  //    var elem=elems[i];
+  //    var classes=elem.className.split(" ");
+  //    var newClass = classes.splice(classes.indexOf(classToRemove),1).join(" ");
+  //    elem.className=classes;
+  //    console.log(i,classes,newClass)
+  //  }
+  //}
+  //window.onload=function() {
+  //document.getElementById("but").onclick=function() {
+  //  removeClass("dice");
+  //}
 
 
 </script>
