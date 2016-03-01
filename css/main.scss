@@ -198,6 +198,28 @@ body{
   }
 }
 
+
+.red-accent{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  &:before{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:block;
+    content:'';
+    border-left:100vw solid $red;
+    border-top:100vh solid transparent;
+    z-index:0;
+  }
+  *{
+    position:relative;
+    z-index:1;
+  }
+}
 .story{
   //margin-top:2em;
   margin-bottom:3rem;
@@ -217,7 +239,12 @@ body{
   }
 }
 .number{
+  color:$red;
   font-family:$condensed-font-family;
+  line-height:.875;
+  margin-bottom:3rem;
+  margin-left: -.035em;
+  letter-spacing: -.25rem;
   font-size:8rem;
   @include breakpoint(m) {
     font-size:12rem;
@@ -228,11 +255,6 @@ body{
   @include breakpoint(xl) {
     font-size:16rem;
   };
-  color:$red;
-  line-height:.875;
-  margin-bottom:3rem;
-  margin-left: -.035em;
-  letter-spacing: -.25rem;
 }
 .medium-number{
   font-family:$condensed-font-family;

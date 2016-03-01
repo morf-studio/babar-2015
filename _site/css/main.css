@@ -1512,7 +1512,7 @@ button {
     font-size: 2rem; } }
 
 a {
-  transition: all .3s;
+  transition: all .2s;
   text-decoration: none;
   font-weight: 600;
   border-bottom-style: solid;
@@ -1521,23 +1521,26 @@ a {
 .link {
   text-decoration: none; }
 
+a:hover {
+  box-shadow: 0 2px 0 0; }
+
 a:active {
   transition: all .3s; }
 
 a.button {
-  transition: background-color .3s;
+  transition: all .25s;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-style: solid;
   border-width: 2px;
   padding: 0.5rem 1rem; }
   a.button:hover {
-    background-color: rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0 0 4px; }
   a.button:active {
     background-color: rgba(0, 0, 0, 0.1); }
 
 a.button-white {
-  transition: background-color .3s;
+  transition: all .25s;
   text-decoration: none;
   color: white;
   padding: 0.5rem 1rem;
@@ -1545,7 +1548,7 @@ a.button-white {
   border-width: 2px;
   padding: 0.5rem 1rem; }
   a.button-white:hover {
-    background-color: rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0 0 4px; }
   a.button-white:active {
     background-color: rgba(0, 0, 0, 0.1); }
 
@@ -3560,19 +3563,38 @@ body {
     stroke-dashoffset: 1000; }
   to {
     stroke-dashoffset: 0; } }
+.red-accent {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; }
+  .red-accent:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: '';
+    border-left: 100vw solid #ff0000;
+    border-top: 100vh solid transparent;
+    z-index: 0; }
+  .red-accent * {
+    position: relative;
+    z-index: 1; }
+
 .story {
   margin-bottom: 3rem;
   line-height: 1;
   position: relative; }
 
 .number {
-  font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-size: 8rem;
   color: #ff0000;
+  font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   line-height: .875;
   margin-bottom: 3rem;
   margin-left: -.035em;
-  letter-spacing: -.25rem; }
+  letter-spacing: -.25rem;
+  font-size: 8rem; }
   @media screen and (min-width: 48em) {
     .number {
       font-size: 12rem; } }
