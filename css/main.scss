@@ -30,7 +30,20 @@ body{
   //border-left:2rem solid $red;
 }
 
+#Logo{
+  //position:fixed;
+  //top:0;
+  //right:0;
+  display:block;
+  z-index:5;
+  width:100%;
+  .wheel{
+    box-shadow:0 0 5px 0 rgba(0,0,0,.15);
+  }
+  .house{
 
+  }
+}
 // Fundraising Bar Animations
 #bar-a {max-height:41% ; height:41% ;}
 #bar-b {max-height:50% ; height:50% ;}
