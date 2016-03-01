@@ -171,13 +171,14 @@ body{
 }
 
 .pathAnim{
-
-}
-.path{
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  stroke-width:4;
-  animation: dash 2s ease-in-out forwards infinite;
+  path{
+    color:$red;
+    stroke:$red;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width:4;
+    animation: dash 2s ease-in-out forwards infinite;
+  }
 }
 @-webkit-keyframes dash {
   from {

@@ -3541,7 +3541,9 @@ body {
   border-top: .5em solid transparent;
   border-bottom: .5em solid transparent; }
 
-.path {
+.pathAnim path {
+  color: #ff0000;
+  stroke: #ff0000;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   stroke-width: 4;
