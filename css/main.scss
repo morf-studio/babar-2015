@@ -8,17 +8,243 @@
         "base"
 ;
 
+.visible-grid{
+  background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
+  background-repeat: repeat-x;
+  background-size: 16.6666667% 100%;
+  margin:0 2rem;
+  //@media screen and (min-width:$tablet){
+    //background-size: 100% 30px;
+  //20px x 1.5 = 30px
+  //}
+  // background-image:repeating-linear-gradient(
+  //
+  // );
+}
 body{
+  background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
+  background-repeat: repeat-y;;
+  background-size:100% 1.5em;
   background-color:$white;
   color:$navy;
   //border-left:2rem solid $red;
 }
+
+
+// Fundraising Bar Animations
+#bar-a {max-height:41% ; height:41% ;}
+#bar-b {max-height:50% ; height:50% ;}
+#bar-c {max-height:51% ; height:51% ;}
+#bar-d {max-height:53% ; height:53% ;}
+#bar-e {max-height:100%; height:100%; }
+
+
+// MAP Animations
+.mapContainer{
+  width:(em(300));
+  height:(em(200));
+  @include breakpoint(m) {
+    width:(em(600));
+    height:(em(400));
+  }
+  @include breakpoint(l) {
+    width:(em(900));
+    height:(em(600));
+  }
+}
+.map{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  display: inline-block;
+	fill: currentColor;
+  stroke: currentColor;
+	padding:1rem 0;
+}
+#C2C{
+  &:hover{
+    path{
+      stroke-width: 20px;
+    }
+  }
+}
+
+// Triggers for Route Path Animation
+
+#labelNUS  {
+  @include breakpoint(m) {
+    top:2%; left:9%;
+  };
+  @include breakpoint(l) {
+    left:11%;
+  }
+}
+#labelME2SB{
+  @include breakpoint(m) {
+    top:19%; right:3.5%;
+  };
+  @include breakpoint(l) {
+    right:7%;
+  }
+}
+#labelP2S  {
+  @include breakpoint(m) {
+    top:24%; right:6%;
+  };
+  @include breakpoint(l) {
+    right:9%;
+  }
+}
+#labelCUS  {
+  @include breakpoint(m) {
+    top:14%; left:6%;
+  };
+  @include breakpoint(l) {
+    left:8.5%;
+  }
+}
+#labelC2C  {
+  @include breakpoint(m) {
+    top:33%; left:3%;
+  };
+  @include breakpoint(l) {
+    left:6%;
+  }
+}
+#labelNC2SD{
+  @include breakpoint(m) {
+    top:50.5%; left:6%;
+  };
+  @include breakpoint(l) {
+    left:9%;
+  }
+}
+#labelSC2SC{
+  @include breakpoint(m) {
+    top:52%; right:12%;
+  };
+  @include breakpoint(l) {
+    right:15.5%;
+  }
+}
+#labelSUS  {
+  @include breakpoint(m) {
+    top:62%; right:18%;
+  };
+  @include breakpoint(l) {
+    right:20%;
+  }
+}
+
+.trigger{
+  display:none;
+  outline:none;
+  @include breakpoint(m) {
+    display:block;
+  };
+  font-size:$h6;
+  background-color:$navy;
+  color:$white;
+  padding:.25em .5em;
+  letter-spacing: 0.1em;
+  &:before, &:after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    top:.5em;
+  }
+}
+.pointer-left{
+  &:before{
+    left: -.75em;
+    border-right:.75em solid $navy;
+    border-top:.5em solid transparent;
+    border-bottom:.5em solid transparent;
+  }
+}
+.pointer-right{
+  &:after{
+    right: -.75em;
+    border-left:.75em solid $navy;
+    border-top:.5em solid transparent;
+    border-bottom:.5em solid transparent;
+  }
+}
+
+.pathAnim{
+  path{
+    color:$red;
+    stroke:$red;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width:4;
+    animation: dash 2s ease-in-out forwards 1;
+  }
+}
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.red-accent{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  &:before{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:block;
+    content:'';
+    border-left:100vw solid $red;
+    border-top:100vh solid transparent;
+    z-index:0;
+  }
+  *{
+    position:relative;
+    z-index:1;
+  }
+}
 .story{
   //margin-top:2em;
   margin-bottom:3rem;
+  line-height:1;
+  position:relative;
+  &:before{
+    //display:block;
+    //content:'';
+    //border-top:2px solid $navy;
+    //width:.75em;
+    //position:absolute;
+    //top:-2rem;
+    //left:-1em;
+    //@include breakpoint(m) {
+    //  top:-2.5rem
+    //};
+  }
 }
 .number{
+  color:$red;
   font-family:$condensed-font-family;
+  line-height:.875;
+  margin-bottom:3rem;
+  margin-left: -.035em;
+  letter-spacing: -.25rem;
   font-size:8rem;
   @include breakpoint(m) {
     font-size:12rem;
@@ -29,11 +255,13 @@ body{
   @include breakpoint(xl) {
     font-size:16rem;
   };
-  color:$red;
+}
+.medium-number{
+  font-family:$condensed-font-family;
+  font-size:4rem;
   line-height:.875;
-  margin-bottom:3rem;
-  margin-left: -.75rem;
-  letter-spacing: -.25rem;
+  margin-bottom:0;
+  margin-left: -.035em;
 }
 .unit{
   color:$red;
@@ -41,11 +269,20 @@ body{
   margin-bottom:0;
 }
 blockquote{
-  background-color:$red;
-  color:$white;
-  font-size:2rem;
-  padding:4rem;
-  font-weight:600;
+  font-size:1.25rem;
+  line-height:1.5rem;
+  position:relative;
+  margin-left:3rem;
+  &:before{
+    position:absolute;
+    display:block;
+    content:'“';
+    font-family:$condensed-font-family;
+    font-size:8rem;
+    left:-3rem;
+    top:3rem;
+    opacity:.5;
+  }
 }
 
 .pane{
@@ -54,24 +291,14 @@ blockquote{
   overflow:hidden;
   max-height:9999px;
   &.closed{
-    max-height:1px;
+    max-height:0px;
   }
 }
 section{
   position:relative;
   //overflow-x:hidden;
 }
-#WhatIsBB{
-  //color:$white;
-  //background-color:$navy;
-}
 
-.average-line{
-  @include breakpoint(l) {
-    width:100%;
-    border-top: 1px dotted $navy;
-  };
-}
 .fundraiser-name{
   transform:rotate(90deg);
   transform-origin: 6% 75%;

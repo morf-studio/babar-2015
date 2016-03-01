@@ -11,7 +11,16 @@ $heading-font-family: 'canada-type-gibson', -apple-system, BlinkMacSystemFont,
   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 $condensed-font-family:'alternate-gothic-no-1-d', "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-
+.condensed{
+  font-family:$condensed-font-family;
+  font-weight:normal;
+}
+.tall{
+  font-size:2em;
+}
+.uppercase{
+  text-transform:uppercase;
+}
 /* Basscss Type Scale */
 // Font Scale    e.g.
 $h1: 2rem;    // 32px
@@ -117,11 +126,14 @@ ul, ol, dl, figure, small,
 
 p {
   //max-width:$measure-width;
-  opacity:0.9;
+  //opacity:0.9;
 }
 small{
   font-size:0.875rem;
-  opacity:0.6;
+  display:block;
+  line-height:1.5rem;
+  margin-top:0.125rem;
+  //opacity:0.75;
 }
 
 @import

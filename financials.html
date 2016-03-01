@@ -1,0 +1,403 @@
+---
+layout: default
+title: Financials
+permalink: /financials/
+---
+
+<div id="Financials" class="pad-t-xxl relative z3">
+
+      <section class="pad-y-xxl pad-x-l bg-navy white">
+        <header class="text-center">
+          <h1 class="number white">2015</h1>
+          <h1 class="caps bold">Audited Financials</h1>
+        </header>
+      </section>
+
+      <section id="Statement" class="pad-y-xxl pad-x-l">
+        <div class="m-col-10 l-col-8 float-center">
+          <h1 class="condensed"> 2015 &ndash; 2014 </h1>
+          <h1 class="story red"> Statement of Financials </h1>
+        </div>
+        <table class="float-center col-12 m-col-10 l-col-8">
+          <thead>
+            <tr> <th>Unrestricted Net Assets </th> <th> 2015 </th> <th> 2014 </th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-6"> Donations Income				          </td> <td class="col-3">1,488,248	</td> <td class="col-3">1,422,075 </td> </tr>
+            <tr><td class="col-6"> Application Fees				          </td> <td class="col-3">65,855	  </td> <td class="col-3">63,630</td> </tr>
+            <tr><td class="col-6"> Apparel Sales				            </td> <td class="col-3">37,575	  </td> <td class="col-3">31,683</td> </tr>
+            <tr><td class="col-6"> In-Kind Contributions		        </td> <td class="col-3">41,030	  </td> <td class="col-3">8,073</td> </tr>
+            <tr><td class="col-6"> Other Income				              </td> <td class="col-3">11,609	  </td> <td class="col-3">5,198</td> </tr>
+            <tr><td class="col-6"> Total Income				              </td> <td class="col-3">1,644,317	</td> <td class="col-3">1,530,659</td> </tr>
+            <tr><td class="col-6"> Assets Released from Restriction	</td> <td class="col-3">22,844	  </td> <td class="col-3"> 35,097</td> </tr>
+            <tr><td class="col-6"> <strong>Total Support and Revnue</strong>				  </td> <td class="col-3"><strong>1,667,161</strong>	</td> <td class="col-3"> <strong>1,565,756</strong></td> </tr>
+          </tbody>
+        </table>
+        <table class="float-center col-12 m-col-10 l-col-8">
+          <thead>
+            <tr> <th class="pad-t-m">Expenses</th> <th> 2015 </th> <th> 2014 </th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-6"> Program Services				              </td><td class="col-3">1,263,899	  </td><td class="col-3">1,322,250</td> </tr>
+            <tr><td class="col-6"> Management and General				        </td><td class="col-3">271,444	    </td><td class="col-3">214,306</td> </tr>
+            <tr><td class="col-6"> Fundraising				                  </td><td class="col-3">  36,518	    </td><td class="col-3">43,008</td> </tr>
+            <tr><td class="col-6"> Total Expenses				                </td><td class="col-3">1,571,861	  </td><td class="col-3">1,579,564</td> </tr>
+            <tr><td class="col-6"> Change in Unrestricted Net Assets		</td><td class="col-3">95,300	      </td><td class="col-3">-13,808</td> </tr>
+            <tr><td class="col-6">Total Other Income					          </td><td class="col-3">0	          </td><td class="col-3">5,198 </td> </tr>
+            <tr><td class="col-6">Change, Total Net Assets					    </td><td class="col-3">127,388	    </td><td class="col-3">-84 </td> </tr>
+            <tr><td class="col-6">Net Assets, Beginning					        </td><td class="col-3">208,147	    </td><td class="col-3">208,231</td></tr>
+            <tr><td class="col-6"> <strong> Net Assets, Ending </strong></td><td class="col-3"><strong>335,535</strong>	    </td><td class="col-3"><strong>208,147</strong></td></tr>
+
+          </tbody>
+        </table>
+
+
+
+
+
+      </section>
+      <section id="Grants" class="pad-y-xxl pad-x-l">
+        <header class="m-col-10 l-col-8 float-center pad-b-l">
+            <h2 class="h1 red">Affordable Housing Grants</h2>
+        </header>
+        <div class="grid cf m-col-10 l-col-8 float-center">
+          <div class="col col-12 m-col-6 pad-y-l">
+            <!-- Table for grant data -->
+            <table class="width-100">
+              <thead>
+                <tr><th>Grant Type</th> <th> Value </th></tr>
+              </thead>
+              <tbody>
+                <tr> <td class="col-8">Competitive Grant Program			            </td><td class="col-4 align-top">$ 369,480 </td></tr>
+                <tr> <td class="col-8">Pre-Arranged Partner Contributions			    </td><td class="col-4 align-top">$ 100,251 </td></tr>
+                <tr> <td class="col-8">Rider $500 Donations			                  </td><td class="col-4 align-top">$ 99,750 </td></tr>
+                <tr> <td class="col-8">On the Road Gifts			                    </td><td class="col-4 align-top">$ 38,100 </td></tr>
+                <tr> <td class="col-8">Alumni Council Emergency Grants			      </td><td class="col-4 align-top">$ 10,000 </td></tr>
+                <tr> <td class="col-8">CWM Contributions			                    </td><td class="col-4 align-top">$ 19,730 </td></tr>
+                <tr> <td class="col-8"><strong>Total Bike & Build Grants</strong>	</td><td class="col-4 align-top"><strong>$ 637,311</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col m-col-6 pad-x-l">
+            <div id="grantsContainer" class="">
+                  <canvas id="grantsGraph" height="400" width="400"></canvas>
+                  <script>
+
+                          var p1Canvas = document.createElement("canvas"),
+                          p1Context = p1Canvas.getContext("2d");
+                          p1Canvas.width = 10;
+                          p1Canvas.height = 10;
+                          p1Context.beginPath();
+                          p1Context.fillStyle = "#132756";
+                          p1Context.fillRect(0, 0, 10, 10);
+                          p1Context.strokeStyle = "#FFF";
+                          p1Context.strokeRect(0.5, 0.5, 0.5, 2);
+                          p1Context.stroke();
+
+                          var p2Canvas = document.createElement("canvas"),
+                          p2Context = p2Canvas.getContext("2d");
+                          p2Canvas.width = 4;
+                          p2Canvas.height = 4;
+                          p2Context.beginPath();
+                          p2Context.fillStyle = "#132756";
+                          p2Context.fillRect(0, 0, 2, 2);
+                          p2Context.strokeStyle = "#FFF";
+                          p2Context.strokeRect(0, 0, 0, 0);
+                          p2Context.stroke();
+
+                          var p3Canvas = document.createElement("canvas"),
+                          p3Context = p3Canvas.getContext("2d");
+                          p3Canvas.width = 8;
+                          p3Canvas.height = 8;
+                          p3Context.beginPath();
+
+                          p3Context.arc(4,4,3,0,2*Math.PI);
+                          p3Context.fillStyle = "#132756";
+                          p3Context.fill();
+                          //p3Context.fillRect(4, 4, 8, 8);
+                        //  p3Context.strokeStyle = "#132756";
+                          //p3Context.strokeRect(2, 2, 2, 2);
+                        //  p3Context.stroke();
+
+                          var p4Canvas = document.createElement("canvas"),
+                          p4Context = p4Canvas.getContext("2d");
+                          p4Canvas.width = 10;
+                          p4Canvas.height = 10;
+                          p4Context.beginPath();
+                          p4Context.fillStyle = "#132756";
+                          p4Context.fillRect(0, 0, 9, 9);
+                          p4Context.strokeStyle = "#FFF";
+                          //p4Context.strokeRect(0.5, 0.5, 1, 10);
+                          //p4Context.stroke();
+
+                          var p5Canvas = document.createElement("canvas"),
+                          p5Context = p5Canvas.getContext("2d");
+                          p5Canvas.width = 10;
+                          p5Canvas.height = 10;
+                          p5Context.beginPath();
+                          p5Context.fillStyle = "#FFF";
+                          p5Context.fillRect(1, 1, 8, 8);
+                          p5Context.strokeStyle = "#132756";
+                          p5Context.strokeRect(0.5, 0.5, 10, 10);
+                          p5Context.stroke();
+
+                          var p6Canvas = document.createElement("canvas"),
+                          p6Context = p6Canvas.getContext("2d");
+                          p6Canvas.width = 4;
+                          p6Canvas.height = 4;
+                          p6Context.beginPath();
+                          p6Context.arc(2,2,2,0,2*Math.PI);
+                          p6Context.fillStyle = "#132756";
+                          p6Context.fill();
+
+                          // Store the pattern for referencing in the Chart.js data
+                          var pattern1 = p1Context.createPattern(p1Canvas, "repeat"); // Dense / Dark Stripes
+                          var pattern2 = p2Context.createPattern(p2Canvas, "repeat"); // 50 50 Mesh Squares
+                          var pattern3 = p2Context.createPattern(p3Canvas, "repeat"); // Grid / Graph Paper
+                          var pattern4 = p2Context.createPattern(p4Canvas, "repeat"); // Negative Circles
+                          var pattern5 = p2Context.createPattern(p5Canvas, "repeat"); // Grid
+                          var pattern6 = p2Context.createPattern(p6Canvas, "repeat"); // Grid
+
+                      var grantsGraph = document.getElementById("grantsGraph").getContext("2d");
+                      var data = [
+                          {
+                            value: 369480,
+                            color:"#132756",
+                            label: "Competitive Grant Program",
+                          },
+                          {
+                            value: 100251,
+                            color: pattern1,
+                            label: "Pre-Arranged Partner Contributions",
+                          },
+                          {
+                            value:99750,
+                            color: pattern6,
+                            label: "Rider $500 Donations",
+                          },
+                          {
+                            value: 38100 ,
+                            color: pattern4,
+                            label: "On the Road Gifts" ,
+                          },
+                          {
+                            value: 10000,
+                            color: pattern3,
+                            label: "Alumni Council Emergency Grants" ,
+                          },
+                          {
+                            value: 19730,
+                            color: pattern2,
+                            label: "CWM Contributions",
+                          }
+                      ]
+                      var grantsChart = new Chart(grantsGraph).Doughnut(data, {
+                         segmentShowStroke : false,
+                         segmentStrokeColor : "#fff",
+                         segmentStrokeWidth : 1,
+                         //animateRotate : true,
+                         //animateScale: true,
+                         animationEasing: "easeInCubic",
+                         responsive : true,
+                         percentageInnerCutout : 33,
+                      });
+                  </script>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+      <section id="Expenses" class="pad-y-xxl pad-x-l">
+        <header class="float-center m-col-10 l-col-8 pad-b-l">
+          <h2 class="h1 red">Program Expenses</h2>
+        </header>
+        <div class="grid cf m-col-10 l-col-8 float-center pad-b-l">
+          <!-- Table of Data -->
+          <div class="col col-12 m-col-6 pad-y-l">
+              <table class="width-100">
+                <thead>
+                <tr>  <th>Expense</th><th> Value</th> </tr>
+                </thead>
+                <tbody>
+                  <tr> <td class="col-8"> Contributions			                </td><td class="col-4 align-top"> $637,311</td></tr>
+                  <tr> <td class="col-8"> Trip Gear, Activities			        </td><td class="col-4 align-top"> $311,657</td></tr>
+                  <tr> <td class="col-8"> Salaries, Benefits, Stipends			</td><td class="col-4 align-top"> $163,602</td></tr>
+                  <tr> <td class="col-8"> Auto			                        </td><td class="col-4 align-top"> $64,149 </td></tr>
+                  <tr> <td class="col-8"> Insurance			                    </td><td class="col-4 align-top"> $16,225 </td></tr>
+                  <tr> <td class="col-8"> Technology			                  </td><td class="col-4 align-top"> $14,383 </td></tr>
+                  <tr> <td class="col-8"> Director Travel			              </td><td class="col-4 align-top"> $5,976  </td></tr>
+                  <tr> <td class="col-8"> Depreciation			                </td><td class="col-4 align-top"> $47,015 </td></tr>
+                  <tr> <td class="col-8"> Other			                        </td><td class="col-4 align-top"> $3,581  </td></tr>
+                  <tr> <td class="col-8"> <strong>Total Expenses</strong>		</td><td class="col-4 align-top"> <strong>$1,263,899</strong></td></tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="col col-8 m-col-6 pad-x-l">
+            <div id="expensesGraphContainer" class="">
+                <canvas id="expensesGraph" height="400" width="400"></canvas>
+            </div>
+            <script>
+              var expenses = document.getElementById("expensesGraph").getContext("2d");
+
+              var data = [
+                  {
+                    value: 637311,
+                    color: "#132756",
+                    label: "Contributions",
+                  },
+                  {
+                    value: 311657,
+                    color: pattern1,
+                    label: "Trip Gear, Activities",
+                  },
+                  {
+                    value: 163602,
+                    color: pattern6,
+                    label: "Salaries, Benefits, Stipends",
+                  },
+                  {
+                    value: 64149,
+                    color: pattern4,
+                    label: "Auto" ,
+                  },
+                  {
+                    value: 16225,
+                    color: pattern3,
+                    label: "Insurance" ,
+                  },
+                  {
+                    value: 14383,
+                    color: pattern5,
+                    label: "Technology",
+                  },
+                  {
+                    value: 5976,
+                    color: "#fff",
+                    label: "Director Travel",
+                  },
+                  {
+                    value: 47015,
+                    color: pattern2,
+                    label: "Depreciation",
+                  },
+                  {
+                    value: 3581,
+                    color: "#ff0000",
+                    label: "Other"
+                  }
+              ]
+              var expensesChart = new Chart(expenses).Doughnut(data, {
+                 segmentShowStroke : false,
+                 segmentStrokeColor : "#fff",
+                 segmentStrokeWidth : 1,
+                 //animateRotate : true,
+                 //animateScale: true,
+                 animationEasing: "easeInCubic",
+                 responsive : true,
+                 percentageInnerCutout : 33,
+              });
+
+            </script>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="cf bg-red white pad-xl float-center m-col-8">
+          <h1>
+            80.4% of money raised directly supports Bike & Build's mission.
+
+          </h1>
+        </div>
+      </section>
+      <section class="pad-y-xxl pad-x-l">
+        <header class="float-center l-col-8 pad-b-l">
+          <h2 class="h1 red">Yearly Affordable Housing Grants</h2>
+        </header>
+        <div class="grid cf l-col-8 float-center">
+          <div class="">
+            <!-- <table class="width-100"> -->
+              <!-- <thead> -->
+                <!-- <th></th> -->
+              <!-- </thead> -->
+              <!-- <tbody> -->
+                <!-- <tr> <td class="col-6">2007</td> <td class="col-6">$394,998</td> </tr> -->
+                <!-- <tr> <td class="col-6">2008</td> <td class="col-6">$494,609</td> </tr> -->
+                <!-- <tr> <td class="col-6">2009</td> <td class="col-6">$740,044</td> </tr> -->
+                <!-- <tr> <td class="col-6">2010</td> <td class="col-6">$563,569</td> </tr> -->
+                <!-- <tr> <td class="col-6">2011</td> <td class="col-6">$608,023</td> </tr> -->
+                <!-- <tr> <td class="col-6">2012</td> <td class="col-6">$648,857</td> </tr> -->
+                <!-- <tr> <td class="col-6">2013</td> <td class="col-6">$468,640</td> </tr> -->
+                <!-- <tr> <td class="col-6">2014</td> <td class="col-6">$613,264</td> </tr> -->
+                <!-- <tr> <td class="col-6">2015</td> <td class="col-6">$637,311</td> </tr> -->
+              <!-- </tbody> -->
+            <!-- </table> -->
+          </div>
+          <div>
+            <div class="col-12">
+              <canvas id="yearlyGrants"> </canvas>
+              <script>
+                var yearlyGrantsChart = document.getElementById("yearlyGrants").getContext("2d");
+                var data2 = {
+                  labels: ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
+                  datasets: [
+                          {
+                              label: "Dollars Granted",
+                              fillColor: "rgba(0,0,0,0)",
+                              strokeColor: "#132756",
+                              pointColor: "#ff0000",
+                              pointStrokeColor: "#fff",
+                              pointHighlightFill: "#fff",
+                              pointHighlightStroke: "rgba(220,220,220,1)",
+                              data: [394998, 494609, 740044, 563569, 608023, 648857, 468640, 613264, 637311]
+                          }
+                      ]
+                  };
+                  var myLineChart = new Chart(yearlyGrantsChart).Line( data2,{
+                    scaleBeginAtZero : true,
+                    //Boolean - Whether grid lines are shown across the chart
+                    scaleShowGridLines : false,
+                    bezierCurve : false,
+
+                    //String - Colour of the grid lines
+                    //scaleGridLineColor : "rgba(0,0,0,.05)",
+
+                    //Number - Width of the grid lines
+                    //scaleGridLineWidth : 1,
+
+                    //Boolean - Whether to show horizontal lines (except X axis)
+                    //scaleShowHorizontalLines: true,
+
+                    //Boolean - Whether to show vertical lines (except Y axis)
+                    //scaleShowVerticalLines: true,
+
+                    //Boolean - If there is a stroke on each bar
+                    //barShowStroke : true,
+
+                    //Number - Pixel width of the bar stroke
+                    //barStrokeWidth : 0,
+
+                    //Number - Spacing between each of the X value sets
+                    barValueSpacing : 10,
+
+                    //Number - Spacing between data sets within X values
+                    barDatasetSpacing : 1,
+                  });
+              </script>
+            </div>
+
+          </div>
+
+        </div>
+        <figure>
+
+
+
+          <figcaption>
+
+          </figcaption>
+        </figure>
+      </section>
+</div>

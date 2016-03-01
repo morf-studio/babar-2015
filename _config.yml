@@ -1,6 +1,7 @@
 # Site settings
 title: B&B 2015
 email: info@bikeandbuild.org
+title: B&B 2015
 description: > # this means to ignore newlines until "baseurl:"
   Bike And Build 2015 Annual Report
 baseurl: "" # the subpath of your site, e.g. /blog/

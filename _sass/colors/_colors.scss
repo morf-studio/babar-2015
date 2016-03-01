@@ -10,6 +10,7 @@ $navy: #132756;
 .red-lt  {color:lighten($red,15%);}
 .red     {color:$red;}
 .red-dk  {color:darken($red,15%);}
+//.red-dk  {color:#bf1722;}
 .blue-lt {color:lighten($skyblue,15%);}
 .blue    {color:$skyblue;}
 .blue-dk {color:darken($skyblue,15%);}
@@ -66,3 +67,7 @@ $white60:rgba(0,0,0,0.6);
 $white70:rgba(0,0,0,0.7);
 $white80:rgba(0,0,0,0.8);
 $white90:rgba(0,0,0,0.9);
+
+@import
+  "shadows"
+;
