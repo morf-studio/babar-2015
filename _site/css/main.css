@@ -3408,6 +3408,13 @@ body {
   background-color: #FFF;
   color: #132756; }
 
+#Logo {
+  display: block;
+  z-index: 5;
+  width: 100%; }
+  #Logo .wheel {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15); }
+
 #bar-a {
   max-height: 41%;
   height: 41%; }
