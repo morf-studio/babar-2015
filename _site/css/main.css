@@ -3395,16 +3395,7 @@ td {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
-.visible-grid {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1.5px);
-  background-repeat: repeat-x;
-  background-size: 16.6666667% 100%;
-  margin: 0 2rem; }
-
 body {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1px);
-  background-repeat: repeat-y;
-  background-size: 100% 1.5em;
   background-color: #FFF;
   color: #132756; }
 
