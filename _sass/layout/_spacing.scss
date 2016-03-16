@@ -109,6 +109,7 @@
 .mar-l-xl {margin-left:$space-xl;}
 .mar-l-xxl{margin-left:$space-xxl;}
 .mar-l-xxxl{margin-left:$space-xxxl;}
+.mar-l-3 {margin-left:3rem;}
 
 .mar-r-xs {margin-right:$space-xs;}
 .mar-r-s  {margin-right:$space-s;}
@@ -128,4 +129,5 @@
 
 .mar-l-auto { margin-left: auto }
 .mar-r-auto { margin-right: auto }
+.mar-y-auto, .vertical-center { margin-top:auto; margin-bottom:auto}
 .mar-x-auto, .float-center { margin-left: auto; margin-right: auto; }
