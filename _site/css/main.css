@@ -551,6 +551,10 @@ dl, dd, ol, ul, figure {
 .pad-xxxl {
   padding: 16rem; }
 
+@media screen and (min-width: 64em) {
+  .l-pad-l {
+    padding: 2rem; } }
+
 .pad-t-xs {
   padding-top: 0.25rem; }
 
