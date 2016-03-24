@@ -1,10 +1,10 @@
 <div id="Onward">
   <!-- On to 2016 -->
-      <section class="pad-b-xl  relative z2">
-        <div class="pad-x-l pad-y-xxl text-center bg-navy white red-accent mar-b-xl">
-          <header class="pad-y-xxl">
-            <h1 class="caps bold"> On to </h1>
-            <h1 class="number"> <span class="white">2016</span> </h1>
+      <section class="pad-b-l  relative z2">
+        <div class="flex min-height-100 pad-x-l bg-navy white red-accent mar-b-xl">
+          <header class="mar-y-auto pad-y-xl text-center float-center">
+            <h1 class="caps bold wow fadeInUp" data-wow-delay=".25s"> On to </h1>
+            <h1 class="number wow fadeInUp" data-wow-delay=".5s"> <span class="white"><span class="kern">2</span>016</span> </h1>
           </header>
         </div>
         <div class="pad-x-l">
@@ -21,35 +21,52 @@
             </div>
           </div>
 
-          <div class="col-12 m-col-8 float-center pad-y-xl">
+          <div class="col-12 m-col-8 float-center pad-y-xl cf">
             <h2 class="h1">Learn More</h2>
-            <p class="mar-t-l">
-               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Apply  &rarr;</a>
-               <a class="red button mar-r-m" href="mailto:info@abikeandbuild.org"> Contact Us &rarr;</a>
-               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan &rarr;</a>
-            </p>
+            <ul class="list-reset cf">
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="http://apply.bikeandbuild.org/"> Apply  &rarr;</a></li>
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="mailto:info@abikeandbuild.org"> Contact Us &rarr;</a></li>
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="http://bikeandbuild.org/about/mission-vision-and-strategic-plan/"> Read Our Strategic Plan &rarr;</a></li>
+            </ul>
           </div>
 
           <div class="col-12 m-col-8 float-center">
-            <h2>Connect</h2>
+            <h2 class="h1">Connect</h2>
           </div>
           <div class="grid cf float-center col-12 m-col-8">
 
-            <div class="col">
+            <div class="col col-6">
               <ul class="list-reset">
-                <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
+                <li class=""> <a class="red" href="http://instagram.com/bikeandbuild" target=_blank> Instagram </a> </li>
                 <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
-                <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
-                <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
+                <li class=""> <a class="red" href="https://www.facebook.com/bikeandbuild" target=_blank>  Facebook</a> </li>
+                <li class=""> <a class="red" href="https://www.youtube.com/user/bikeandbuild" target=_blank> Youtube </a> </li>
               </ul>
             </div>
           </div>
+          <section class="cf red">
+            <div class="pad-t-xl pad-b-m text-center">
+              <p>
+                <a class="button red" href="#Intro"> &uarr; </a>
+
+              </p>
+              <p>Back to Top</p>
+            </div>
+          </section>
         </div>
 
       </section>
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer pad-x-l border-bottom-thick pad-y-m cf">
+  <section class="cf">
+    <div class="col col-6">
+      <p> All content © Bike &amp; Build and respective owners, 2016. </p>
+    </div>
+    <div class="col-6 float-r">
+      <p class="text-right"> Site by <a class="navy" href="http://morf.studio"> Morf Studio</a>.</p>
+    </div>
+  </section>
 
 
 </footer>
@@ -57,65 +74,11 @@
 
 
 <script>
-new WOW().init();
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Load Wow Anims on scroll
+  new WOW().init();
+  // Load Canvas Widths / recalculate
 
-//wow = new WOW(
-//{
-//boxClass:     'wow',      // default
-//animateClass: 'animated', // default
-//offset:       0,          // default
-//mobile:       true,       // default
-//live:         true        // default
-//}
-//)
-//wow.init();
-
-
-
-// Open & Close Additional Content Sections
-  var panes = document.getElementsByClassName('pane');
-  var i;
-  for (i = 0; i < panes.length; i++) {
-      panes[i].classList.add("closed");
-  }
-  var panelinks = document.getElementsByClassName('paneLink');
-  var j;
-  for (j = 0; j < panelinks.length; j++){
-      var paneID = panelinks[j].getAttribute("href");
-      panelinks[j].addEventListener("click", function(event){
-        event.preventDefault();
-    });
-  }
-  function openID(){
-    document.getElementById("ID").classList.toggle("closed");
-  }
-
-
-
-  function removePaths() {
-    var routePaths = document.getElementsByClassName('routePath');
-    var l;
-    for (l = 0; l < routePaths.length; l++){
-      routePaths[l].classList.remove("pathAnim");
-    }
-  }
-
-  //function removeClass(classToRemove){
-  //  var elems = document.getElementsByClassName(classToRemove);
-  //console.log(elems.length);
-  //  if (!elems) return;
-  //  for (var i=elems.length-1;i>=0;i--) {
-  //    var elem=elems[i];
-  //    var classes=elem.className.split(" ");
-  //    var newClass = classes.splice(classes.indexOf(classToRemove),1).join(" ");
-  //    elem.className=classes;
-  //    console.log(i,classes,newClass)
-  //  }
-  //}
-  //window.onload=function() {
-  //document.getElementById("but").onclick=function() {
-  //  removeClass("dice");
-  //}
-
-
+});
 </script>
+<script src="{{site.github.url}}/js/smoothscroll.min.js"></script>

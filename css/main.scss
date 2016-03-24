@@ -8,11 +8,19 @@
         "base"
 ;
 
+// INTRO FOUT
+.wf-loading #Intro {
+visibility: hidden;
+}
+.wf-active #Intro {
+visibility: visible;
+}
+
 .visible-grid{
-  background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
-  background-repeat: repeat-x;
-  background-size: 16.6666667% 100%;
-  margin:0 2rem;
+  //background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
+  //background-repeat: repeat-x;
+  //background-size: 16.6666667% 100%;
+  //margin:0 2rem;
   //@media screen and (min-width:$tablet){
     //background-size: 100% 30px;
   //20px x 1.5 = 30px
@@ -22,22 +30,40 @@
   // );
 }
 body{
-  background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
-  background-repeat: repeat-y;;
-  background-size:100% 1.5em;
+  //background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
+  //background-repeat: repeat-y;;
+  //background-size:100% 1.5em;
   background-color:$white;
   color:$navy;
   //border-left:2rem solid $red;
 }
 
-
+#Logo{
+  display:block;
+  z-index:5;
+  width:100%;
+  .wheel{
+    animation: spinningWheel 10s linear forwards infinite;
+    transform-origin: center;
+  }
+}
+span.kern{
+  letter-spacing:.02em;
+}
+@-webkit-keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
 // Fundraising Bar Animations
 #bar-a {max-height:41% ; height:41% ;}
 #bar-b {max-height:50% ; height:50% ;}
 #bar-c {max-height:51% ; height:51% ;}
 #bar-d {max-height:53% ; height:53% ;}
 #bar-e {max-height:100%; height:100%; }
-
 
 // MAP Animations
 .mapContainer{
@@ -136,7 +162,7 @@ body{
   }
 }
 
-.trigger{
+.trigger-tag{
   display:none;
   outline:none;
   @include breakpoint(m) {
@@ -156,6 +182,7 @@ body{
 }
 .pointer-left{
   &:before{
+    animation: highlight-left-arrow 16s ease-in-out infinite;
     left: -.75em;
     border-right:.75em solid $navy;
     border-top:.5em solid transparent;
@@ -164,6 +191,7 @@ body{
 }
 .pointer-right{
   &:after{
+    animation: highlight-right-arrow 16s ease-in-out infinite;
     right: -.75em;
     border-left:.75em solid $navy;
     border-top:.5em solid transparent;
@@ -171,32 +199,147 @@ body{
   }
 }
 
-.pathAnim{
+.routePath{
   path{
-    color:$red;
-    stroke:$red;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    stroke-width:4;
-    animation: dash 2s ease-in-out forwards 1;
+    //color:$red;
+    //stroke:$red;
+    stroke-dasharray:10;
+    stroke-dashoffset:500;
+    stroke-width:2;
   }
 }
 @-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  0%{stroke-dashoffset: 500;stroke:$red;}
+  12%{stroke-dashoffset: 0;stroke:$red;}
+  13%{stroke:$navy;}
+  100%{stroke-dashoffset: 0;}
 }
 @keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  0%{stroke-dashoffset: 500;stroke:$red;}
+  12%{stroke-dashoffset: 0;stroke:$red;}
+  13%{stroke:$navy;}
+  100%{stroke-dashoffset: 0;}
 }
+
+@-webkit-keyframes dash-reverse {
+  0%{stroke-dashoffset: -500;stroke:$red;}
+  12%{stroke-dashoffset: 0;stroke:$red;}
+  13%{stroke:$navy;}
+  100%{stroke-dashoffset: 0;}
+}
+@keyframes dash-reverse {
+  0%{stroke-dashoffset: -500;stroke:$red;}
+  12%{stroke-dashoffset: 0;stroke:$red;}
+  13%{stroke:$navy;}
+  100%{stroke-dashoffset: 0;}
+}
+
+@-webkit-keyframes highlight-tag {
+  0%{ background-color:$red;}
+  12%{ background-color:$red;}
+  13%{background-color:$navy;}
+  100%{background-color:$navy;}
+}
+@keyframes highlight-tag {
+  0%{ background-color:$red;}
+  12%{ background-color:$red;}
+  13%{background-color:$navy;}
+  100%{background-color:$navy;}
+}
+
+@-webkit-keyframes highlight-left-arrow {
+  0%{ border-right-color:$red;}
+  12%{ border-right-color:$red;}
+  13%{border-right-color:$navy;}
+  100%{border-right-color:$navy;}
+}
+@keyframes highlight-left-arrow {
+  0%{ border-right-color:$red;}
+  12%{ border-right-color:$red;}
+  13%{border-right-color:$navy;}
+  100%{border-right-color:$navy;}
+}
+@-webkit-keyframes highlight-right-arrow {
+  0%{ border-left-color:$red;}
+  12%{ border-left-color:$red;}
+  13%{border-left-color:$navy;}
+  100%{border-left-color:$navy;}
+}
+@keyframes highlight-right-arrow {
+  0%{ border-left-color:$red;}
+  12%{ border-left-color:$red;}
+  13%{border-left-color:$navy;}
+  100%{border-left-color:$navy;}
+}
+
+
+.trigger-tag{
+  animation: highlight-tag 16s ease-in-out infinite;
+}
+
+
+#labelME2SB, #labelME2SB:before{-webkit-animation-delay:0s;animation-delay:0s;}
+#labelNUS  , #labelNUS:after{-webkit-animation-delay:2s;animation-delay:2s;}
+#labelP2S  , #labelP2S:before{-webkit-animation-delay:4s;animation-delay:4s;}
+#labelC2C  , #labelC2C:after{-webkit-animation-delay:6s;animation-delay:6s;}
+#labelCUS  , #labelCUS:after{-webkit-animation-delay:8s;animation-delay:8s;}
+#labelNC2SD, #labelNC2SD:after{-webkit-animation-delay:12s;animation-delay:10s;}
+#labelSC2SC, #labelSC2SC:before{-webkit-animation-delay:10s;animation-delay:12s;}
+#labelSUS  , #labelSUS:before{-webkit-animation-delay:14s;animation-delay:14s;}
+
+
+#pME2{
+  path{
+    animation: dash-reverse 16s ease-in-out infinite;
+  -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+          animation-delay: 0s;
+
+        } }
+#pNUS{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+          animation-delay: 2s;
+          }}
+#pP2S{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
+          animation-delay: 4s;
+            }}
+#pC2C{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 6s; /* Chrome, Safari, Opera */
+          animation-delay: 6s;
+          }}
+#pCUS{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 8s; /* Chrome, Safari, Opera */
+          animation-delay: 8s;
+          }}
+#pNC2{
+  path{
+    animation: dash-reverse 16s ease-in-out infinite;
+  -webkit-animation-delay: 10s; /* Chrome, Safari, Opera */
+          animation-delay: 10s;
+
+}}
+#pSC2{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 12s; /* Chrome, Safari, Opera */
+          animation-delay: 12s;
+            }}
+#pSUS{
+  path{
+    animation: dash 16s ease-in-out infinite;
+  -webkit-animation-delay: 14s; /* Chrome, Safari, Opera */
+          animation-delay: 14s;
+            }}
+
+
 
 
 .red-accent{

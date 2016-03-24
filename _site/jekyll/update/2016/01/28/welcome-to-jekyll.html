@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Bike &amp; Build 2015 Annual Report </title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=false" />
     <link rel="shortcut icon" id="favicon" href="favicon.png">
     <link rel="canonical" href="">
 
@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
 
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
     <script src="/js/wow.min.js"></script>
-    <script src="/js/chart.js"></script>
+    <script src="/js/chart.min.js"></script>
+    
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -51,6 +51,9 @@
   <body>
     <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+
+
+
 <symbol id="road-line" viewBox="0 0 1024 1024">
 <title>road-line</title>
 <path class="path1" d="M 0 64 l 1080 120" stroke="orange" stroke-width="64">
@@ -94,24 +97,11 @@
 </symbol>
 <symbol id="icon-house-old" viewBox="0 0 24 24">
 <title>house-old</title>
-<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-<path d="M0 0h24v24H0z" fill="none"/>
+<!-- <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/> -->
+<!-- <path d="M0 0h24v24H0z" fill="none"/> -->
 </symbol>
-<symbol id="icon-clockalt" viewBox="0 0 24 24">
-<title>clockalt</title>
-<path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-<path d="M0 0h24v24H0z" fill="none"/>
-<path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-</symbol>
-<symbol id="icon-dollarsign" viewBox="0 0 24 24">
-<title>dollarsign</title>
-<path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
-<path d="M0 0h24v24H0z" fill="none"/>
-</symbol>
-<symbol id="icon-piggy" viewBox="0 0 48 48">
-<title>piggy</title>
-<path id="piggy_bank" data-name="piggy bank" d="M44,21.87c0-7.55-8.19-13.69-18.25-13.69A22.45,22.45,0,0,0,15.17,10.7,9.59,9.59,0,0,0,8.64,8.18a1.16,1.16,0,0,0-.91.45,1.12,1.12,0,0,0-.19,1l1.78,6.26a11.55,11.55,0,0,0-1.46,3.3l-1.58.36a3.47,3.47,0,0,0-2.14,1.5,3.41,3.41,0,0,0-.45,2.58l1,4.46a3.49,3.49,0,0,0,4.09,2.59L11,30.19l0.2-.06a17.85,17.85,0,0,0,4.87,3.34L15.55,36a3.41,3.41,0,0,0,2.68,4,3.21,3.21,0,0,0,.67.07,3.42,3.42,0,0,0,3.35-2.75l0.4-2a24.48,24.48,0,0,0,3.09.19A23.5,23.5,0,0,0,31,35l0.48,2.41a3.41,3.41,0,0,0,3.35,2.75,3.84,3.84,0,0,0,.67-0.06,3.41,3.41,0,0,0,2.68-4l-0.74-3.68C41.46,29.83,44,26.06,44,21.87Zm-9.07,9.31,0.15,0.73v0l0.32,1.55,0.6,3a1.15,1.15,0,0,1-.89,1.35l-0.23,0a1.13,1.13,0,0,1-1.11-.91l-0.51-2.58-0.35-1.69-0.11-.56a21.21,21.21,0,0,1-7,1.17,21.46,21.46,0,0,1-4.88-.55l-0.08.4L20.42,35l-0.39,2a1.14,1.14,0,0,1-1.11.91l-0.23,0a1.15,1.15,0,0,1-.89-1.35l0.42-2.12,0.41-2.07,0-.2A15.51,15.51,0,0,1,12.33,28a1.12,1.12,0,0,0-.84-0.38,1.07,1.07,0,0,0-.61.19,0.92,0.92,0,0,1-.36.15l-2.22.5a1.16,1.16,0,0,1-1.37-.86l-1-4.45a1.1,1.1,0,0,1,.16-0.86,1.16,1.16,0,0,1,.71-0.52L9,21.29a0.35,0.35,0,0,0,.14,0,1.15,1.15,0,0,0,.86-0.9,9.11,9.11,0,0,1,1.56-3.63,1.15,1.15,0,0,0,.17-1l-1.5-5.15a7.48,7.48,0,0,1,3.93,2.27,1.14,1.14,0,0,0,1.43.22,20.15,20.15,0,0,1,10.19-2.64c8.81,0,16,5.12,16,11.41C41.72,25.71,39,29.13,34.93,31.18ZM16.06,18.44a1.71,1.71,0,1,1-1.71,1.71A1.71,1.71,0,0,1,16.06,18.44Zm15.79-5.78a18.1,18.1,0,0,0-12.21,0,1.14,1.14,0,1,0,.8,2.14A15.83,15.83,0,0,1,31,14.8,1.14,1.14,0,0,0,31.85,12.66Z"/>
-</symbol>
+
+
 
 <symbol id="icon-eye" viewBox="0 0 1024 1024">
 <title>eye</title>
@@ -533,22 +523,19 @@
     
 <header class="site-header relative z3">
   <div class="wrapper">
-    <div class="absolute top-0 left-0 mar-xl col-2 s-col-1">
-        <img src="img/ui/BB_Logo_White_Animated.gif" alt="">
-    </div>
-    <nav class="absolute top-l right-0 site-nav mar-l">
-        <a href="#Letter"     class="page-link mar-l-l white wow fadeInRight" data-wow-delay=".75s"> From Board & Staff </a>
-        <a href="#Story"      class="page-link mar-l-l white wow fadeInRight" data-wow-delay=".5s"> Story </a>
-        <a href="#Financials" class="page-link mar-l-l white wow fadeInRight" data-wow-delay=".25s"> Financials </a>
-        <a href="#Onward"     class="page-link mar-l-l white wow fadeInRight" data-wow-delay="0s"> Onward </a>
+    <nav class="absolute top-0 right-0 site-nav mar-y-l mar-r-l">
+        <a href="#Letter"     class="page-link mar-l-m h5 white wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".75s">From Board & Staff</a>
+        <a href="#Story"      class="page-link mar-l-m h5 white wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".5s">Story</a>
+        <a href="#Financials" class="page-link mar-l-m h5 white wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".25s">Financials</a>
+        <a href="#Onward"     class="page-link mar-l-m h5 white wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0s">Onward</a>
     </nav>
   </div>
 </header>
 
 <!-- Intro -->
-<div class="fixed visible-grid top-0 bottom-0 left-0 right-0 z1">
+<!-- <div class="fixed visible-grid top-0 bottom-0 left-0 right-0 z1">
 
-</div>
+</div> -->
 
 
     <div class="main wrap">
@@ -583,11 +570,11 @@
 
     <div id="Onward">
   <!-- On to 2016 -->
-      <section class="pad-b-xl  relative z2">
-        <div class="pad-x-l pad-y-xxl text-center bg-navy white red-accent mar-b-xl">
-          <header class="pad-y-xxl">
-            <h1 class="caps bold"> On to </h1>
-            <h1 class="number"> <span class="white">2016</span> </h1>
+      <section class="pad-b-l  relative z2">
+        <div class="flex min-height-100 pad-x-l bg-navy white red-accent mar-b-xl">
+          <header class="mar-y-auto pad-y-xl text-center float-center">
+            <h1 class="caps bold wow fadeInUp" data-wow-delay=".25s"> On to </h1>
+            <h1 class="number wow fadeInUp" data-wow-delay=".5s"> <span class="white"><span class="kern">2</span>016</span> </h1>
           </header>
         </div>
         <div class="pad-x-l">
@@ -604,35 +591,52 @@
             </div>
           </div>
 
-          <div class="col-12 m-col-8 float-center pad-y-xl">
+          <div class="col-12 m-col-8 float-center pad-y-xl cf">
             <h2 class="h1">Learn More</h2>
-            <p class="mar-t-l">
-               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Apply  &rarr;</a>
-               <a class="red button mar-r-m" href="mailto:info@abikeandbuild.org"> Contact Us &rarr;</a>
-               <a class="red button mar-r-m" href="http://bikeandbuild.org/apply"> Read Our 2016&ndash;2018 Strategic Plan &rarr;</a>
-            </p>
+            <ul class="list-reset cf">
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="http://apply.bikeandbuild.org/"> Apply  &rarr;</a></li>
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="mailto:info@abikeandbuild.org"> Contact Us &rarr;</a></li>
+              <li class="col mar-b-m">  <a class="red button mar-r-m" href="http://bikeandbuild.org/about/mission-vision-and-strategic-plan/"> Read Our Strategic Plan &rarr;</a></li>
+            </ul>
           </div>
 
           <div class="col-12 m-col-8 float-center">
-            <h2>Connect</h2>
+            <h2 class="h1">Connect</h2>
           </div>
           <div class="grid cf float-center col-12 m-col-8">
 
-            <div class="col">
+            <div class="col col-6">
               <ul class="list-reset">
-                <li class=""> <a class="red" href="http://instagram.com/bikebuild" target=_blank> Instagram </a> </li>
+                <li class=""> <a class="red" href="http://instagram.com/bikeandbuild" target=_blank> Instagram </a> </li>
                 <li class=""> <a class="red" href="http://twitter.com/bikebuild" target=_blank> Twitter </a> </li>
-                <li class=""> <a class="red" href="http://facebook.com/bikebuild" target=_blank>  Facebook</a> </li>
-                <li class=""> <a class="red" href="http://youtube.com/bikebuild" target=_blank> Youtube </a> </li>
+                <li class=""> <a class="red" href="https://www.facebook.com/bikeandbuild" target=_blank>  Facebook</a> </li>
+                <li class=""> <a class="red" href="https://www.youtube.com/user/bikeandbuild" target=_blank> Youtube </a> </li>
               </ul>
             </div>
           </div>
+          <section class="cf red">
+            <div class="pad-t-xl pad-b-m text-center">
+              <p>
+                <a class="button red" href="#Intro"> &uarr; </a>
+
+              </p>
+              <p>Back to Top</p>
+            </div>
+          </section>
         </div>
 
       </section>
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer pad-x-l border-bottom-thick pad-y-m cf">
+  <section class="cf">
+    <div class="col col-6">
+      <p> All content © Bike &amp; Build and respective owners, 2016. </p>
+    </div>
+    <div class="col-6 float-r">
+      <p class="text-right"> Site by <a class="navy" href="http://morf.studio"> Morf Studio</a>.</p>
+    </div>
+  </section>
 
 
 </footer>
@@ -640,68 +644,14 @@
 
 
 <script>
-new WOW().init();
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Load Wow Anims on scroll
+  new WOW().init();
+  // Load Canvas Widths / recalculate
 
-//wow = new WOW(
-//{
-//boxClass:     'wow',      // default
-//animateClass: 'animated', // default
-//offset:       0,          // default
-//mobile:       true,       // default
-//live:         true        // default
-//}
-//)
-//wow.init();
-
-
-
-// Open & Close Additional Content Sections
-  var panes = document.getElementsByClassName('pane');
-  var i;
-  for (i = 0; i < panes.length; i++) {
-      panes[i].classList.add("closed");
-  }
-  var panelinks = document.getElementsByClassName('paneLink');
-  var j;
-  for (j = 0; j < panelinks.length; j++){
-      var paneID = panelinks[j].getAttribute("href");
-      panelinks[j].addEventListener("click", function(event){
-        event.preventDefault();
-    });
-  }
-  function openID(){
-    document.getElementById("ID").classList.toggle("closed");
-  }
-
-
-
-  function removePaths() {
-    var routePaths = document.getElementsByClassName('routePath');
-    var l;
-    for (l = 0; l < routePaths.length; l++){
-      routePaths[l].classList.remove("pathAnim");
-    }
-  }
-
-  //function removeClass(classToRemove){
-  //  var elems = document.getElementsByClassName(classToRemove);
-  //console.log(elems.length);
-  //  if (!elems) return;
-  //  for (var i=elems.length-1;i>=0;i--) {
-  //    var elem=elems[i];
-  //    var classes=elem.className.split(" ");
-  //    var newClass = classes.splice(classes.indexOf(classToRemove),1).join(" ");
-  //    elem.className=classes;
-  //    console.log(i,classes,newClass)
-  //  }
-  //}
-  //window.onload=function() {
-  //document.getElementById("but").onclick=function() {
-  //  removeClass("dice");
-  //}
-
-
+});
 </script>
+<script src="/js/smoothscroll.min.js"></script>
 
 
   </body>
