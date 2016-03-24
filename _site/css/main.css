@@ -2349,6 +2349,9 @@ body {
     animation: spinningWheel 10s linear forwards infinite;
     transform-origin: center; }
 
+span.kern {
+  letter-spacing: .02em; }
+
 @-webkit-keyframes spinningWheel {
   0% {
     transform: rotate(0deg); }
