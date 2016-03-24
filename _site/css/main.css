@@ -2337,6 +2337,12 @@ td {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp; }
 
+.wf-loading #Intro {
+  visibility: hidden; }
+
+.wf-active #Intro {
+  visibility: visible; }
+
 body {
   background-color: #FFF;
   color: #132756; }

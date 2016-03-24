@@ -8,6 +8,14 @@
         "base"
 ;
 
+// INTRO FOUT
+.wf-loading #Intro {
+visibility: hidden;
+}
+.wf-active #Intro {
+visibility: visible;
+}
+
 .visible-grid{
   //background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
   //background-repeat: repeat-x;
