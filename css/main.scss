@@ -31,18 +31,22 @@ body{
 }
 
 #Logo{
-  //position:fixed;
-  //top:0;
-  //right:0;
   display:block;
   z-index:5;
   width:100%;
   .wheel{
-    box-shadow:0 0 5px 0 rgba(0,0,0,.15);
+    animation: spinningWheel 10s linear forwards infinite;
+    transform-origin: center;
   }
-  .house{
+}
 
-  }
+@-webkit-keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes spinningWheel {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
 }
 // Fundraising Bar Animations
 #bar-a {max-height:41% ; height:41% ;}
@@ -50,7 +54,6 @@ body{
 #bar-c {max-height:51% ; height:51% ;}
 #bar-d {max-height:53% ; height:53% ;}
 #bar-e {max-height:100%; height:100%; }
-
 
 // MAP Animations
 .mapContainer{
